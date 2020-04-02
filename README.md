@@ -1,4 +1,5 @@
-# nbdev template
+# Simply Drug
 
-Use this template to more easily create your nbdev project.
+Tutorials and useful scripts for drug discovery
+.
 
