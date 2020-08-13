@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="467"
+   height="364"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.44"
+   version="1.0"
+   sodipodi:docbase="C:\Program Files\Inkscape"
+   sodipodi:docname="Enzyme progress curve.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0384615"
+     inkscape:cx="233.5"
+     inkscape:cy="182"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3738"
+     width="467px"
+     height="364px"
+     inkscape:window-width="853"
+     inkscape:window-height="573"
+     inkscape:window-x="268"
+     inkscape:window-y="32" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3738">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 66.444444,27.925926 L 66.444444,304.2963 L 381.33333,304.2963"
+         id="path3888" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 66.444444,305.25926 C 104.53888,259.59742 139.06225,222.56488 171.56214,185.36683 C 246.3524,99.764938 312.74067,75.700766 379.40741,64.518519"
+         id="path3890"
+         sodipodi:nodetypes="csc" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 45.259259,99.185185 L 45.259259,36.592593"
+         id="path3892" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 304.2963,326.44444 L 367.85185,326.44444"
+         id="path3894" />
+      <path
+         sodipodi:type="star"
+         style="fill:black;fill-opacity:1;stroke:black;stroke-opacity:1"
+         id="path3896"
+         sodipodi:sides="3"
+         sodipodi:cx="44.296295"
+         sodipodi:cy="52"
+         sodipodi:r1="11.555556"
+         sodipodi:r2="5.7777777"
+         sodipodi:arg1="-1.5707963"
+         sodipodi:arg2="-0.52359878"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 44.296295,40.444444 L 54.3037,57.777778 L 34.28889,57.777778 L 44.296295,40.444444 z "
+         transform="matrix(0.627452,0,0,0.903151,17.46548,-6.799209)" />
+      <path
+         sodipodi:type="star"
+         style="fill:black;fill-opacity:1;stroke:black;stroke-opacity:1"
+         id="path3898"
+         sodipodi:sides="3"
+         sodipodi:cx="361.11111"
+         sodipodi:cy="325.48148"
+         sodipodi:r1="11.555556"
+         sodipodi:r2="5.7777777"
+         sodipodi:arg1="0"
+         sodipodi:arg2="1.0471976"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 372.66667,325.48148 L 355.33334,335.48888 L 355.33334,315.47407 L 372.66667,325.48148 z "
+         transform="matrix(0.954319,0,0,0.719876,19.03547,91.17514)" />
+      <text
+         xml:space="preserve"
+         style="font-size:20px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Helvetica"
+         x="177.18518"
+         y="261.92593"
+         id="text3900"><tspan
+           sodipodi:role="line"
+           id="tspan3902"
+           x="177.18518"
+           y="261.92593">Initial rate period</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:20px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Helvetica"
+         x="231.11111"
+         y="335.11111"
+         id="text3904"><tspan
+           sodipodi:role="line"
+           id="tspan3906"
+           x="231.11111"
+           y="335.11111">Time</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:20px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Helvetica"
+         x="-253.15794"
+         y="50.661205"
+         id="text3908"
+         transform="matrix(0,-1,1,0,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan3910"
+           x="-253.15794"
+           y="50.661205">Product formed</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 109.77778,276.37037 L 121.33333,285.03703 L 195.48148,196.44444 L 183.92592,186.81481"
+         id="path3912" />
+    </g>
+  </g>
+</svg>
