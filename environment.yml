@@ -4,18 +4,19 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - python>=3.6
+  - jupyter
+  - scikit-learn
   - numpy
   - pandas
   - rdkit=2019.09.3
   - scipy
   - seaborn
+  - matplotlib
+  -pip
   - pip:
-    - pip
-    - matplotlib
     - nbdev
     - pubchempy
     - python-pptx
-    - scikit-learn
-    - sklearn
     - wget
     - xlrd
