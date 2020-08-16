@@ -7,6 +7,7 @@ sidebar: home_sidebar
 
 
 
+nb_path: "index.ipynb"
 ---
 <!--
 
@@ -108,10 +109,15 @@ Dose-response assay for compound toxicity.</li>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>pip install simplydrug</p>
-<p>or clone this repository</p>
-
-<pre><code>git clone https://github.com/disc04/simplydrug</code></pre>
+<p>There are several options:</p>
+<ol>
+<li><p>You can run the notebooks from Binder <link to binder></p>
+</li>
+<li><p>pip install simplydrug</p>
+</li>
+<li><p>Clone this repository: git clone <a href="https://github.com/disc04/simplydrug">https://github.com/disc04/simplydrug</a></p>
+</li>
+</ol>
 
 </div>
 </div>
@@ -121,13 +127,13 @@ Dose-response assay for compound toxicity.</li>
 <h2 id="Dependencies">Dependencies<a class="anchor-link" href="#Dependencies"> </a></h2><p>The codebase relies on the following dependencies (tested version provided in parentheses):</p>
 <ul>
 <li>python (3.6.1)</li>
-<li>rdkit (2019.09.3)</li>
 <li>pubchempy (1.0.4)</li>
 <li>scipy (1.4.1)</li>
 <li>seaborn (0.10.0)</li>
 <li>python-pptx (0.6.18)</li>
 <li>wget(3.2)</li>
 <li>xlrd (1.2.0)</li>
+<li>rdkit (2019.09.3)</li>
 </ul>
 
 </div>
@@ -159,13 +165,14 @@ Dose-response assay for compound toxicity.</li>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">simplydrug.core</span> <span class="k">as</span> <span class="nn">sd</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">ExcelFile</span><span class="p">(</span><span class="s1">&#39;hts_notebooks//hts_data//enzyme_kinetics_data1.xlsx&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="mi">0</span><span class="p">))[[</span><span class="s1">&#39;Well&#39;</span><span class="p">,</span><span class="s1">&#39;0s&#39;</span><span class="p">,</span><span class="s1">&#39;120s&#39;</span><span class="p">,</span><span class="s1">&#39;240s&#39;</span><span class="p">,</span> <span class="s1">&#39;360s&#39;</span><span class="p">]]</span>
 <span class="n">layout_path</span> <span class="o">=</span> <span class="s1">&#39;hts_notebooks//hts_data//enzyme_kinetics_layout.xlsx&#39;</span>
 <span class="n">chem_path</span> <span class="o">=</span> <span class="s1">&#39;hts_notebooks//hts_data//compounds//example_chemicals.csv&#39;</span>
 <span class="n">chem_plate</span> <span class="o">=</span> <span class="s1">&#39;ex_plate1&#39;</span>
 
-<span class="n">results</span> <span class="o">=</span> <span class="n">add_layout</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">layout_path</span><span class="p">,</span> <span class="n">chem_path</span> <span class="o">=</span> <span class="n">chem_path</span><span class="p">,</span> <span class="n">chem_plate</span> <span class="o">=</span> <span class="n">chem_plate</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">add_layout</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">layout_path</span><span class="p">,</span> <span class="n">chem_path</span> <span class="o">=</span> <span class="n">chem_path</span><span class="p">,</span> <span class="n">chem_plate</span> <span class="o">=</span> <span class="n">chem_plate</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 
@@ -178,18 +185,132 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-2-1827f7e6c91d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> chem_plate <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;ex_plate1&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> 
-<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg"> </span>results <span class="ansi-blue-fg">=</span> add_layout<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> layout_path<span class="ansi-blue-fg">,</span> chem_path <span class="ansi-blue-fg">=</span> chem_path<span class="ansi-blue-fg">,</span> chem_plate <span class="ansi-blue-fg">=</span> chem_plate<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span> display<span class="ansi-blue-fg">(</span>results<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Added  Well
+Added  Status
+Added compounds:  ex_plate1 
 
-<span class="ansi-red-fg">NameError</span>: name &#39;add_layout&#39; is not defined</pre>
+</pre>
 </div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Well</th>
+      <th>0s</th>
+      <th>120s</th>
+      <th>240s</th>
+      <th>360s</th>
+      <th>Status</th>
+      <th>Plate</th>
+      <th>Compound_id</th>
+      <th>lib_name</th>
+      <th>SMILES</th>
+      <th>Compound Name</th>
+      <th>SecName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A1</td>
+      <td>798</td>
+      <td>910</td>
+      <td>977</td>
+      <td>1090</td>
+      <td>Negative</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A2</td>
+      <td>469</td>
+      <td>459</td>
+      <td>463</td>
+      <td>486</td>
+      <td>Positive</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A3</td>
+      <td>446</td>
+      <td>470</td>
+      <td>485</td>
+      <td>523</td>
+      <td>Sample</td>
+      <td>ex_plate1</td>
+      <td>Compound_0001</td>
+      <td>example_library</td>
+      <td>Cc1nn(C)c2nc(C(C)C)cc(C(=O)N3CCN(C(=O)C4CC4)CC...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A4</td>
+      <td>532</td>
+      <td>581</td>
+      <td>632</td>
+      <td>710</td>
+      <td>Sample</td>
+      <td>ex_plate1</td>
+      <td>Compound_0002</td>
+      <td>example_library</td>
+      <td>CCOC(=O)c1c(S(=O)(=O)N2CCOCC2)c(-c2ccccc2)n(-c...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A5</td>
+      <td>549</td>
+      <td>631</td>
+      <td>676</td>
+      <td>743</td>
+      <td>Sample</td>
+      <td>ex_plate1</td>
+      <td>Compound_0003</td>
+      <td>example_library</td>
+      <td>Cn1nc(-c2ccc(C=C(C#N)S(=O)(=O)c3ccc(C(F)(F)F)c...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -200,7 +321,14 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To check our 386 well plate for systematic errors, we often use heatmap representation:</p>
+<p>{% include image.html style="float: left; margin-right:700px" max-width="950" file="/simplydrug/hts_notebooks/hts_images/index_df.png" %}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To check our 384 well plate for systematic errors, we often use heatmap representation:</p>
 
 </div>
 </div>
@@ -212,34 +340,23 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hts_heatmap</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="p">,</span> <span class="n">layout_path</span> <span class="o">=</span> <span class="n">layout_path</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;120s&#39;</span><span class="p">],</span> <span class="n">path</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd</span><span class="o">.</span><span class="n">hts_heatmap</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="p">,</span> <span class="n">layout_path</span> <span class="o">=</span> <span class="n">layout_path</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;120s&#39;</span><span class="p">],</span> <span class="n">path</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>{% include image.html style="float: left; margin-right:700px" max-width="550" file="/simplydrug/hts_notebooks/hts_images/index_heatmap.png" %}</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div align="justify"> In this plate, most of the readings across the plate are close to the plate average, and four wells with high readings probably represent our hit compounds.</div>

@@ -7,8 +7,8 @@ __all__ = ['exception_handler', 'add_layout', 'order_wells', 'hts_heatmap', 'sum
 
 # Cell
 def exception_handler(func):
-    '''Exception handler helper function.
-    :param func: any function.'''
+    """Exception handler helper function.
+    :param func: any function."""
 
     def wrapper_func(*args, **kwargs):
         try:
@@ -22,7 +22,7 @@ def exception_handler(func):
 # Cell
 @exception_handler
 def add_layout(df = None, layout_path = None, chem_path = None, chem_plate = None):
-    '''Takes DataFrame, the path to layout excel file, chemical library path, and plate name and return
+    """Takes DataFrame, the path to layout excel file, chemical library path, and plate name and return
     DataFrame with added layout columns. In the layout file, each sheet should represent different aspects
     of the layout. Obligatory sheets are 'Well' (for well names), and 'Status'. 'Status' column defines
     each well as 'Sample',  'Positive' or 'Negative' control, or 'Reference'.
@@ -33,7 +33,7 @@ def add_layout(df = None, layout_path = None, chem_path = None, chem_plate = Non
     :param chem_path: path to chemical library file, optional.
     :param chem_library: name of the chemical library plate, optional.
     :return: DataFrame with added layout columns.
-    '''
+    """
 
     import pandas as pd
     import numpy as np
@@ -58,9 +58,9 @@ def add_layout(df = None, layout_path = None, chem_path = None, chem_plate = Non
 @exception_handler
 def order_wells(x = None):
     import re
-    '''Orders wells as they appear in the plate.
+    """Orders wells as they appear in the plate.
     :param x: list of wells.
-    :return: Ordered list of wells.'''
+    :return: Ordered list of wells."""
     convert = lambda text: int(text) if text.isdigit() else text
     alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ]
     return sorted(x, key = alphanum_key)
@@ -68,14 +68,14 @@ def order_wells(x = None):
 # Cell
 @exception_handler
 def hts_heatmap(df = None, layout_path = None, features = None, save_as = None, path = None):
-    '''Takes DataFrame, list of features, a path to layout file and to the output folder and creates
+    """Takes DataFrame, list of features, a path to layout file and to the output folder and creates
     plate heatmap for input features.
     :param df: pandas DataFrame with the data.
     :param layout_path: path to layout xlsx file.
     :param features: list of features to build heatmaps on.
     :param save_as: filename to save the resulting figure, optional.
     :param path: path to the output folder to save the resulting figure, optional.
-    :return: None. '''
+    :return: None. """
 
     import pandas as pd
     import numpy as np
@@ -129,13 +129,13 @@ def hts_heatmap(df = None, layout_path = None, features = None, save_as = None, 
 # Cell
 @exception_handler
 def sum_statistics(df = None, feature = None):
-    '''Takes DataFrame and calculates summary statistics for the experiment. The data must
+    """Takes DataFrame and calculates summary statistics for the experiment. The data must
     contain the 'Status' column, defining each row as 'Sample', 'Positive' or 'Negative'
     control, or 'Reference'. 'Reference' wells are excluded from the analysis.
     :param df: pandas DataFrame with the data.
     :param feature: feature to calculate statistics.
     :return: summary statistics DataFrame.
-    '''
+    """
     import pandas as pd
     import numpy as np
     from scipy import stats
@@ -160,12 +160,12 @@ def sum_statistics(df = None, feature = None):
 # Cell
 @exception_handler
 def normalize_z(df = None, feature = None):
-    '''Takes DataFrame with experimental results and feature name and adds a column with
+    """Takes DataFrame with experimental results and feature name and adds a column with
     normalized values of the feature.
     :param df: pandas DataFrame with the data.
     :param feature: name of the feature to normalize.
     :return: DataFrame with new column containing z-normalized feature values.
-    '''
+    """
     import pandas as pd
     mean = df[df['Status'] == 'Sample'][[feature]].mean()
     std = df[df['Status'] == 'Sample'][[feature]].std()
@@ -175,12 +175,12 @@ def normalize_z(df = None, feature = None):
 # Cell
 @exception_handler
 def histogram_feature(df = None, feature = None, save_as = None, path = None):
-    '''Creates histogram of the input feature.
+    """Creates histogram of the input feature.
     :param df: pandas DataFrame with the data.
     :param feature: name of the feature to build histogram.
     :param save_as: filename to save the resulting figure, optional.
     :param path: path to the output folder to save the resulting figure, optional.
-    :return: None. '''
+    :return: None."""
     import pandas as pd
     import matplotlib as mpl
     import matplotlib.colors as colors
@@ -199,13 +199,13 @@ def histogram_feature(df = None, feature = None, save_as = None, path = None):
 @exception_handler
 def plot_treatments(df = None, x = None, y = None, column = None, kind = None, ylabel = None,
                     palette = None, height = None, aspect = None, save_as = None, path = None):
-    '''Creates plot by treatments. If your data has different treatments, set column = 'Treatment'.
+    """Creates plot by treatments. If your data has different treatments, set column = 'Treatment'.
     :param df: pandas DataFrame for plotting.
     :param x, y: names of variables in data, optional.
     :param column, kind, ylabel, palette, high, aspect: These features are seaborn.boxplot features.
     :param save_as: filename to save the resulting figure, optional.
     :param path: path to the output folder to save the resulting figure, optional.
-    :return: None. '''
+    :return: None."""
     import pandas as pd
     import matplotlib as mpl
     import matplotlib.colors as colors
@@ -227,13 +227,13 @@ def plot_treatments(df = None, x = None, y = None, column = None, kind = None, y
 @exception_handler
 def plot_curve_raw(df = None, x = None, y = None, units = None, hue = None, hue_order = None, xlabel = None,
                    ylabel = None, xlimit = None, palette = None, save_as = None, path = None):
-    '''Plot raw curves.
+    """Plot raw curves.
     :param df: pandas DataFrame for plotting.
     :param x, y: names of variables in data.
     :param units, hue, hue_order, xlabel, ylabel, xlimit, palette, high, aspect: These features are seaborn.boxplot features.
     :param save_as: filename to save the resulting figure, optional.
     :param path: path to the output folder to save the resulting figure, optional.
-    :return: None. '''
+    :return: None."""
     import pandas as pd
     import matplotlib as mpl
     import matplotlib.colors as colors
@@ -256,14 +256,14 @@ def plot_curve_raw(df = None, x = None, y = None, units = None, hue = None, hue_
 @exception_handler
 def plot_curve_mean(df = None, x = None, y = None, hue = None, hue_order = None, xlabel = None, ylabel = None,
                     xlimit = None, palette = None, save_as = None, path = None):
-    '''Plot mean curves.
+    """Plot mean curves.
     :param df: pandas DataFrame for plotting.
     :param x, y: names of variables in data.
     :param hue, hue_order, xlabel, ylabel, xlimit, palette, high, aspect: These features are seaborn.boxplot features.
     :param save_as: filename to save the resulting figure, optional.
     :param path: path to the output folder to save the resulting figure, optional.
     :return: None.
-    '''
+    """
     import pandas as pd
     import matplotlib as mpl
     import matplotlib.colors as colors
@@ -286,14 +286,14 @@ def plot_curve_mean(df = None, x = None, y = None, hue = None, hue_order = None,
 @exception_handler
 def pointplot_plate(df = None, x = None, y = None, hue = None, hue_order = None, threshold = None, ylabel = None,
                     palette = None,  save_as = None, path  = None):
-    '''Creates point plot for the data.
+    """Creates point plot for the data.
     :param df: pandas DataFrame for plotting.
     :param x, y: names of variables in data.
     :param hue, hue_order, ylabel, xlimit, palette: These features are seaborn.boxplot features.
     :param threshold: threshold for hit identification.
     :param save_as: filename to save the resulting figure, optional.
     :param path: path to the output folder to save the resulting figure, optional.
-    :return: None. '''
+    :return: None."""
     import pandas as pd
     import matplotlib as mpl
     import matplotlib.colors as colors
@@ -302,8 +302,10 @@ def pointplot_plate(df = None, x = None, y = None, hue = None, hue_order = None,
 
     g = sns.catplot(data = df, x = x, y = y, hue = hue, height = 6, aspect = 2.5, margin_titles = False,
                    palette = palette, hue_order = hue_order)
-    plt.plot([0, len(df.Well.unique())], [threshold, threshold],'r-')
-    plt.plot([0, len(df.Well.unique())], [-threshold, -threshold],'r-')
+    if threshold:
+        plt.plot([0, len(df.Well.unique())], [threshold, threshold],'r-')
+        plt.plot([0, len(df.Well.unique())], [-threshold, -threshold],'r-')
+
     g.set_xticklabels([])
     plt.ylabel(ylabel)
     g.despine()
@@ -315,9 +317,9 @@ def pointplot_plate(df = None, x = None, y = None, hue = None, hue_order = None,
 # Cell
 @exception_handler
 def calculate_growth_score(df = None):
-    '''Calculates growth scores from time series data.
+    """Calculates growth scores from time series data.
     :param df: pandas DataFrame with time-series data.
-    :return: DataFrame with growth scores.'''
+    :return: DataFrame with growth scores."""
     import pandas as pd
     import numpy as np
 
@@ -343,9 +345,9 @@ def calculate_growth_score(df = None):
 # Cell
 @exception_handler
 def filter_curves(df = None):
-    '''Filter out aberrant curves.
+    """Filter out aberrant curves.
     :param df: pandas DataFrame with time-series data.
-    :return: clean DataFrame with growth scores.'''
+    :return: clean DataFrame with growth scores."""
     import pandas as pd
 
     clean = pd.DataFrame()
@@ -370,18 +372,17 @@ def filter_curves(df = None):
 # Cell
 @exception_handler
 def inv_log(x = None):
-    '''Inverse log calculator'''
+    """Inverse log calculator"""
     return ((10**-x)/(1e-6))
 
 # Cell
 @exception_handler
 def ll4(x,b,c,d,e):
-    '''Fitting function - LM equation.
-    This function is basically a copy of the LL.4 function (4-parameter sigmoidal function) from the R drc package with
+    """Fitting function - LM equation, LL.4 function (4-parameter sigmoidal function).
      - b: hill slope
      - c: min response
      - d: max response
-     - e: EC50'''
+     - e: EC50"""
     import numpy as np
     import warnings
     warnings.filterwarnings('ignore')
@@ -390,14 +391,14 @@ def ll4(x,b,c,d,e):
 # Cell
 @exception_handler
 def pDose(x = None):
-    '''Helper function, compute log transformed concentrations.'''
+    """Helper function, compute log transformed concentrations."""
     import numpy as np
     return(-np.log10(1e-6*x))
 
 # Cell
 @exception_handler
 def dose_response(df = None, y_label = 'Response', path = None):
-    '''Dose response function. The input DataFrame should contain columns 'Compound_id', 'Dose', 'Response'.
+    """Dose response function. The input DataFrame should contain columns 'Compound_id', 'Dose', 'Response'.
     The DataFrame shouldn't contain NAN values or dose 0, which will result in infinity at logDose.
     The fitting function is a LL.4 function (4-parameter sigmoidal function) with
      - b: hill slope
@@ -407,7 +408,7 @@ def dose_response(df = None, y_label = 'Response', path = None):
     :param df: pandas DataFrame for plotting.
     :param y_label: name for y-axis.
     :param path: path to the output folder to save the results, optional.
-    :return: DataFrame with Dose Response fitting results.'''
+    :return: DataFrame with Dose Response fitting results."""
     import pandas as pd
     import numpy as np
     import scipy.optimize as opt
@@ -481,12 +482,12 @@ def dose_response(df = None, y_label = 'Response', path = None):
 # Cell
 @exception_handler
 def dose_response_old(df = None, y_label = 'Response', path = None):
-    '''Dose response function. The input DataFrame should contain columns 'Compound_id', 'Dose', 'Response'.
+    """Dose response function. The input DataFrame should contain columns 'Compound_id', 'Dose', 'Response'.
     The DataFrame shouldn't contain NAN values or dose 0, which will result in infinity at logDose.
     :param df: pandas DataFrame for plotting.
     :param y_label: name for y-axis.
     :param path: path to the output folder to save the results, optional.
-    :return: DataFrame with Dose Response fitting results.'''
+    :return: DataFrame with Dose Response fitting results."""
     import pandas as pd
     import numpy as np
     import scipy.optimize as opt
@@ -562,7 +563,7 @@ def dose_response_old(df = None, y_label = 'Response', path = None):
 # Cell
 @exception_handler
 def plot_dr_viability(data = None, y_label = 'Response', path = None):
-    '''Plots response vs viability. The DataFrame should contain columns ['Compound', 'Dose','logDose', 'Viability', 'Response'] (at least).'''
+    """Plots response vs viability. The DataFrame should contain columns ['Compound', 'Dose','logDose', 'Viability', 'Response'] (at least)."""
     import pandas as pd
     import matplotlib as mpl
     import matplotlib.colors as colors
@@ -614,10 +615,10 @@ def plot_dr_viability(data = None, y_label = 'Response', path = None):
 # Cell
 @exception_handler
 def prune_compound(df, threshold = -0.15):
-    '''This function takes DataFrame of one-compound dose-response data, find maximum activity,
+    """This function takes DataFrame of one-compound dose-response data, find maximum activity,
     and drops rows starting from treshold-defined reduction of Response. The default value for threshold = -0.15,
    it drops rows starting from 15% reduction of Response. The input DataFrame should contain columns
-   'Compound_id', 'Dose', 'Response'.'''
+   'Compound_id', 'Dose', 'Response'."""
 
     prunned = pd.DataFrame()
     df = df.sort_values('Dose')
@@ -634,12 +635,12 @@ def prune_compound(df, threshold = -0.15):
 # Cell
 @exception_handler
 def plot_polynomial(df = None, y_label = 'Response', degree = 2, path = None):
-    '''Plot polynomial fit.
+    """Plot polynomial fit.
     :param df: pandas DataFrame for plotting.
     :param y_label: name for y-axis.
     :param degree: degree of the polynomial fit.
     :param path: path to the output folder to save the results, optional.
-    :return: None. '''
+    :return: None."""
     import pandas as pd
     import numpy as np
     import matplotlib as mpl
@@ -685,14 +686,14 @@ def plot_polynomial(df = None, y_label = 'Response', degree = 2, path = None):
 # Cell
 @exception_handler
 def df_to_table(df = None, slide = None, left = None, top = None, width = None, height = None, colnames = None):
-    '''Converts a Pandas DataFrame to a PowerPoint table on the given slide of a PowerPoint presentation.
+    """Converts a Pandas DataFrame to a PowerPoint table on the given slide of a PowerPoint presentation.
     The table is a standard Powerpoint table, and can easily be modified with the Powerpoint tools (resizing columns, changing formatting etc).
     Source:  https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py
     :param df: pandas DataFrame with the data.
     :param slide: slide object from the python-pptx library containing the slide on which you want the table to appear
     :param left, top, right, width, height, colnames: These parameters are python-pptx parameters.
     :return: Powerpoint table.
-     '''
+     """
     import pandas as pd
     from pptx import Presentation
     from pptx.util import Inches, Pt
@@ -727,12 +728,12 @@ def df_to_table(df = None, slide = None, left = None, top = None, width = None, 
 # Cell
 @exception_handler
 def create_presentation(path = None):
-    '''Creates ppt report from files in the specified folder.
+    """Creates ppt report from files in the specified folder.
     Reads template ppt file and files in the input folder, adds all pictures and tables with
     size less than 30 rows from input folder.
     :param path: path to the output folder to save the results.
     :return: None.
-    '''
+    """
     import os
     import pandas as pd
     from datetime import date

@@ -63,24 +63,26 @@ Dose-response assay for compound toxicity.
 
 ## Install
 
-pip install simplydrug     
+There are several options:
 
-or clone this repository
+1. You can run the notebooks from Binder <link to binder>
 
-    git clone https://github.com/disc04/simplydrug
+2. pip install simplydrug     
+
+3. Clone this repository: git clone https://github.com/disc04/simplydrug
 
 ## Dependencies
 
 The codebase relies on the following dependencies (tested version provided in parentheses):
 
  - python (3.6.1)
- - rdkit (2019.09.3)
  - pubchempy (1.0.4)
  - scipy (1.4.1)
  - seaborn (0.10.0)
  - python-pptx (0.6.18)
  - wget(3.2)
  - xlrd (1.2.0)
+ - rdkit (2019.09.3)
 
 ## Example usage
 
@@ -90,145 +92,25 @@ The codebase relies on the following dependencies (tested version provided in pa
 
 ```python
 import pandas as pd
+import simplydrug.core as sd
 
 data = pd.DataFrame(pd.ExcelFile('hts_notebooks//hts_data//enzyme_kinetics_data1.xlsx').parse(0))[['Well','0s','120s','240s', '360s']]
 layout_path = 'hts_notebooks//hts_data//enzyme_kinetics_layout.xlsx'
 chem_path = 'hts_notebooks//hts_data//compounds//example_chemicals.csv'
 chem_plate = 'ex_plate1'
 
-results = add_layout(data, layout_path, chem_path = chem_path, chem_plate = chem_plate)
+results = sd.add_layout(data, layout_path, chem_path = chem_path, chem_plate = chem_plate)
 display(results.head())
-
 ```
 
-    Added  Well
-    Added  Status
-    Added compounds:  ex_plate1 
-    
+<img style="float: left; margin-right:700px" width="950" src="hts_notebooks/hts_images/index_df.png">
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Well</th>
-      <th>0s</th>
-      <th>120s</th>
-      <th>240s</th>
-      <th>360s</th>
-      <th>Status</th>
-      <th>Plate</th>
-      <th>Compound_id</th>
-      <th>lib_name</th>
-      <th>SMILES</th>
-      <th>Compound Name</th>
-      <th>SecName</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>A1</td>
-      <td>798</td>
-      <td>910</td>
-      <td>977</td>
-      <td>1090</td>
-      <td>Negative</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>A2</td>
-      <td>469</td>
-      <td>459</td>
-      <td>463</td>
-      <td>486</td>
-      <td>Positive</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>A3</td>
-      <td>446</td>
-      <td>470</td>
-      <td>485</td>
-      <td>523</td>
-      <td>Sample</td>
-      <td>ex_plate1</td>
-      <td>Compound_0001</td>
-      <td>example_library</td>
-      <td>Cc1nn(C)c2nc(C(C)C)cc(C(=O)N3CCN(C(=O)C4CC4)CC...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>A4</td>
-      <td>532</td>
-      <td>581</td>
-      <td>632</td>
-      <td>710</td>
-      <td>Sample</td>
-      <td>ex_plate1</td>
-      <td>Compound_0002</td>
-      <td>example_library</td>
-      <td>CCOC(=O)c1c(S(=O)(=O)N2CCOCC2)c(-c2ccccc2)n(-c...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>A5</td>
-      <td>549</td>
-      <td>631</td>
-      <td>676</td>
-      <td>743</td>
-      <td>Sample</td>
-      <td>ex_plate1</td>
-      <td>Compound_0003</td>
-      <td>example_library</td>
-      <td>Cn1nc(-c2ccc(C=C(C#N)S(=O)(=O)c3ccc(C(F)(F)F)c...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-To check our 386 well plate for systematic errors, we often use heatmap representation:
+To check our 384 well plate for systematic errors, we often use heatmap representation:
 
 ```python
-hts_heatmap(df = results, layout_path = layout_path, features = ['120s'], path = None)
+sd.hts_heatmap(df = results, layout_path = layout_path, features = ['120s'], path = None)
 ```
 
-
-![png](docs/images/output_12_0.png)
-
+<img style="float: left; margin-right:700px" width="550" src="hts_notebooks/hts_images/index_heatmap.png">
 
 <div align="justify"> In this plate, most of the readings across the plate are close to the plate average, and four wells with high readings probably represent our hit compounds.</div>
