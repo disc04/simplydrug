@@ -5,15 +5,15 @@ channels:
   - defaults
 dependencies:
   - python>=3.6
+  - pip
   - jupyter
   - scikit-learn
   - numpy
   - pandas
   - rdkit=2019.09.3
   - scipy
-  - seaborn
   - matplotlib
-  -pip
+  - seaborn
   - pip:
     - nbdev
     - pubchempy
