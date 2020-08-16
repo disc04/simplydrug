@@ -65,7 +65,7 @@ Dose-response assay for compound toxicity.
 
 There are several options:
 
-1. You can run the notebooks from Binder <link to binder>
+1. You can run the notebooks from Binder https://mybinder.org/v2/gh/disc04/simplydrug/master
 
 2. pip install simplydrug     
 
