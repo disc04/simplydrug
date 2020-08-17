@@ -73,6 +73,7 @@ There are several options:
 
 3. Clone this repository: git clone https://github.com/disc04/simplydrug
 
+
 ## Dependencies
 
 The codebase relies on the following dependencies (tested version provided in parentheses):
