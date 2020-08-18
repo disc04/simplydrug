@@ -1,15 +1,15 @@
 items:
    - title: "Welcome to simplydrug"
-     url: /Welcome to simplydrug
+     url: /
     - title: "List of notebooks"
-     url: /List of notebooks
+     url: /
    - title:	"Install"
-     url: /Install
+     url: /
    - title:	"Dependencies"
-     url: /Dependencies
+     url: /
    - title: "Example usage"
-     url: /Example usage
+     url: /
     - title: "Functionality"
-     url: /Functionality
+     url: /
     - title: "Copyright"
-     url: /Copyright"
+     url: /
