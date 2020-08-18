@@ -7,11 +7,26 @@ entries:
 - folders:
   - folderitems:
     - output: web,pdf
-      title: Overview
-      url: /
+    title: "Welcome to simplydrug"
+    url: /#Welcome to simplydrug
     - output: web,pdf
-      title: Title
-      url: /simplydrug
+    - title: "List of notebooks"
+    url: /#List of notebooks
+    - output: web,pdf
+    title:	"Install"
+    url: /#Install
+    - output: web,pdf
+    title:	"Dependencies"
+    url: /#Dependencies
+    - output: web,pdf
+    title: "Example usage"
+    url: /#Example usage
+    - output: web,pdf
+    title: "Functionality"
+    url: /#Functionality
+    - output: web,pdf
+    title: "Copyright"
+    url: /#Copyright"
     output: web
     title: simplydrug
   output: web
