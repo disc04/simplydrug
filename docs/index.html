@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Simplydrug
+title: simplydrug
 keywords: fastai
 sidebar: home_sidebar
 nb_path: "index.ipynb"
@@ -26,7 +26,7 @@ nb_path: "index.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Welcome-to-simplydrug">Welcome to Simplydrug<a class="anchor-link" href="#Welcome-to-simplydrug"> </a></h2>
+<h2 id="Welcome-to-simplydrug">Welcome to simplydrug<a class="anchor-link" href="#Welcome-to-simplydrug"> </a></h2>
 </div>
 </div>
 </div>
@@ -34,6 +34,7 @@ nb_path: "index.ipynb"
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><div align="justify"> Integrative technological breakthroughs are based on effective scientific communication. The development of integrative workflows using the mainstream Software as a service (SaaS) distribution model is usually not feasible for academic labs, small teams, students, and drug discovery enthusiasts. To advance integrative drug discovery, we developed a set of open-source lightweight modular analysis workflows. These workflows describe the early stages of biological assay development and high throughput screening and provide a hands-on introduction to Drug Discovery for everybody with basic knowledge of biology, python programming, or data science. </div>
 {% include image.html style="float: left; margin-right:700px" max-width="550" file="/hts_notebooks/hts_images/bcdd.png" %}</p>
+<p><img src="https://github.com/disc04/simplydrug/tree/master/docs/hts_images/bcdd.png" style="float: left; margin-right:700px" max-width="550"></p>
 
 </div>
 </div>
@@ -183,6 +184,9 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+
+<p><img src="https://github.com/disc04/simplydrug/tree/master/docs/hts_images/index_df.png" style="float: left; margin-right:700px" max-width="950"></p>
+
 <p>{% include image.html style="float: left; margin-right:700px" max-width="950" file="/hts_notebooks/hts_images/index_df.png" %}</p>
 
 </div>
@@ -214,6 +218,9 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+
+<p><img src="https://github.com/disc04/simplydrug/tree/master/docs/hts_images/index_heatmap.png" style="float: left; margin-right:700px" max-width="550"></p>
+
 <p>{% include image.html style="float: left; margin-right:700px" max-width="550" file="/hts_notebooks/hts_images/index_heatmap.png" %}</p>
 
 </div>
@@ -299,9 +306,17 @@ Sheet names in the layout file are translated to column names in the updated Dat
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div align="justify">Add_layout function takes DataFrame, the path to layout excel file, the path to chemical library and plate name, and returns an updated DataFrame with added layout columns. We use a layout excel file to describe the experimental design, and the names of the excel sheets become the names of the columns in a final data table. Each excel sheet contains a table with dimensions of the experiment plate (usually 96 or 384-well plates) and represents some aspect of the layout - well ID, treatment, cell density, compound ID, compound concentration, etc.
-The layout file must contain sheets named 'Well' and 'Status'. The 'Well' table lists well IDs, and the 'Status' can contain either 'Sample', 'Positive' or 'Negative' control, or 'Reference' values. 'Reference' wells are excluded from calculations. The function add_layout merges measurements and layout by the 'Well' column.</div><p>{% include image.html style="float: left; margin-right:700px" max-width="850" file="/hts_notebooks/hts_images/layout.png" %}</p>
-<div align="justify"> Next, we need to import compound ids from chemical library. There are two options. We can fill compound ids manually in the layout excel, or we can give to the function the plate name from defined library. In this module, we will use example_chemicals.csv file located in Resources. The name of the library is 'example_library', it contains random compounds divided into 3 plates: 'ex_plate1', 'ex_plate2', and 'ex_plate3'
-For example, to load compounds from plate 3 of the library, we will pass to the function chem_path = '..//resources//compounds//example_chemicals.csv, and chem_plate = 'ex_plate3'.</div><p>{% include image.html style="float: left; margin-right:700px" max-width="750" file="/hts_notebooks/hts_images/chemlib.png" %}</p>
+The layout file must contain sheets named 'Well' and 'Status'. The 'Well' table lists well IDs, and the 'Status' can contain either 'Sample', 'Positive' or 'Negative' control, or 'Reference' values. 'Reference' wells are excluded from calculations. The function add_layout merges measurements and layout by the 'Well' column.
+</div>
+<p><img src="https://github.com/disc04/simplydrug/tree/master/docs/hts_images/layout.png" style="float: left; margin-right:700px" max-width="850"></p>
+
+<p>{% include image.html style="float: left; margin-right:700px" max-width="850" file="/hts_notebooks/hts_images/layout.png" %}</p>
+<div align="justify"> Next, we need to import compound ids from chemical library. There are two options. We can fill compound ids manually in the layout excel, or we can give to the function the plate name from defined library. In this module, we will use example_chemicals.csv file located in hts_data/compounds. The name of the library is 'example_library', it contains random compounds divided into 3 plates: 'ex_plate1', 'ex_plate2', and 'ex_plate3'
+For example, to load compounds from plate 3 of the library, we will pass to the function chem_path = 'hts_data//compounds//example_chemicals.csv, and chem_plate = 'ex_plate3'.
+</div>
+
+<p><img src="https://github.com/disc04/simplydrug/tree/master/docs/hts_images//chemlib.png" style="float: left; margin-right:700px" max-width="750"></p>
+<p>{% include image.html style="float: left; margin-right:700px" max-width="750" file="/hts_notebooks/hts_images/chemlib.png" %}</p>
 
 </div>
 </div>
