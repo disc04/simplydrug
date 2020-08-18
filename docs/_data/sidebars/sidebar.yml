@@ -1,15 +1,28 @@
-sidebar:
- - title: "Welcome to simplydrug"
-   url: /Welcome to simplydrug
- - title: "List of notebooks"
-   url: /List of notebooks
- - title:	"Install"
-   url: /Install
- - title:	"Dependencies"
-   url: /Dependencies
- - title: "Example usage"
-   url: /Example usage
- - title: "Functionality"
-   url: /Functionality
- - title: "Copyright"
-   url: /Copyright"
+entries:
+- folders:
+  - folderitems:
+    - output: web,pdf
+    title: "Welcome to simplydrug"
+    url: /Welcome to simplydrug
+    - output: web,pdf
+    - title: "List of notebooks"
+    url: /List of notebooks
+    - output: web,pdf
+    title:	"Install"
+    url: /Install
+    - output: web,pdf
+    title:	"Dependencies"
+    url: /Dependencies
+    - output: web,pdf
+    title: "Example usage"
+    url: /Example usage
+    - output: web,pdf
+    title: "Functionality"
+    url: /Functionality
+    - output: web,pdf
+    title: "Copyright"
+    url: /Copyright"
+    output: web
+    title: simplydrug
+  output: web
+  title: Sidebar
