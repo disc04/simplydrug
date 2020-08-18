@@ -1,9 +1,9 @@
 ---
 layout: default
-title: simplydrug
+title: Simplydrug
 keywords: fastai
-sidebar: sd_sidebar
-nb_path: "simplydrug.ipynb"
+sidebar: home_sidebar
+nb_path: "index.ipynb"
 ---
 <!--
 
@@ -26,13 +26,15 @@ nb_path: "simplydrug.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Welcome to simplydrug">Welcome to simplydrug<a class="anchor-link" href="#Welcome to simplydrug"> </a></h2>
+<h2 id="Welcome-to-simplydrug">Welcome to Simplydrug<a class="anchor-link" href="#Welcome-to-simplydrug"> </a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div align="justify"> Integrative technological breakthroughs are based on effective scientific communication. To advance integrative drug discovery, we developed a set of open-source modular analysis workflows. These workflows describe the early stages of biological assay development and high throughput screening and provide a hands-on introduction to Drug Discovery for everybody with basic knowledge of biology, python programming, or data science. </div>
+<p><div align="justify"> Integrative technological breakthroughs are based on effective scientific communication. The development of integrative workflows using the mainstream Software as a service (SaaS) distribution model is usually not feasible for academic labs, small teams, students, and drug discovery enthusiasts. To advance integrative drug discovery, we developed a set of open-source lightweight modular analysis workflows. These workflows describe the early stages of biological assay development and high throughput screening and provide a hands-on introduction to Drug Discovery for everybody with basic knowledge of biology, python programming, or data science. </div>
+{% include image.html style="float: left; margin-right:700px" max-width="550" file="/hts_notebooks/hts_images/bcdd.png" %}</p>
+
 </div>
 </div>
 </div>
@@ -46,7 +48,7 @@ nb_path: "simplydrug.ipynb"
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The notebooks are built in a sequence and gradually introduce concepts of experimental design, QC, and data analysis of different biological assays.</p>
 <ul>
-<li><a href="https://github.com/disc04/simplydrug/blob/master/hts_notebooks/01a_enzyme_kinetics.ipynb"><strong>01a_enzyme_kinetics</strong> </a><br>
+<li><a href="https://github.com/disc04/simplydrug/blob/master/hts_notebooks/01a_enzyme_kinetics.ipynb"><strong>01a_enzyme_kinetics</strong></a><br>
 Topics: enzyme kinetics, enzyme assays, fluorometry, assay variability and confidence intervals, Z-factor, Z-score based normalization, plate heatmap, hit extraction, molecule visualization, importing molecule bioactivity data.</li>
 </ul>
 <ul>
@@ -177,50 +179,11 @@ Dose-response assay for compound toxicity.</li>
     </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Added  Well
-Added  Status
-Added compounds:  ex_plate1 
-
-</pre>
-</div>
-</div>
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
     {% endraw %}
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>{% include image.html style="float: left; margin-right:700px" max-width="950" file="/simplydrug/hts_notebooks/hts_images/index_df.png" %}</p>
+<p>{% include image.html style="float: left; margin-right:700px" max-width="950" file="/hts_notebooks/hts_images/index_df.png" %}</p>
 
 </div>
 </div>
@@ -251,7 +214,7 @@ Added compounds:  ex_plate1
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>{% include image.html style="float: left; margin-right:700px" max-width="550" file="/simplydrug/hts_notebooks/hts_images/index_heatmap.png" %}</p>
+<p>{% include image.html style="float: left; margin-right:700px" max-width="550" file="/hts_notebooks/hts_images/index_heatmap.png" %}</p>
 
 </div>
 </div>
@@ -262,15 +225,6 @@ Added compounds:  ex_plate1
 </div>
 </div>
 </div>
-
-        
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Functionality">Functionality<a class="anchor-link" href="#Functionality"> </a></h2>
@@ -297,8 +251,7 @@ Added compounds:  ex_plate1
 <div class="output_markdown rendered_html output_subarea ">
 <h4 id="exception_handler" class="doc_header"><code>exception_handler</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L9" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler</code>(<strong><code>func</code></strong>)</p>
 </blockquote>
-<p>Exception handler helper function.
-</p>
+<p>Exception handler helper function.</p>
 
 </div>
 
@@ -310,12 +263,6 @@ Added compounds:  ex_plate1
 </div>
     {% endraw %}
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Add-Plate-Layout">Add plate layout<a class="anchor-link" href="#Add-Plate-Layout"> </a></h4>
-</div>
-</div>
-</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -334,11 +281,10 @@ Added compounds:  ex_plate1
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="add_layout" class="doc_header"><code>add_layout</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L24" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>add_layout</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>layout_path</code></strong>=<em><code>None</code></em>, <strong><code>chem_path</code></strong>=<em><code>None</code></em>, <strong><code>chem_plate</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="add_layout" class="doc_header"><code>add_layout</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L22" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>add_layout</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>layout_path</code></strong>=<em><code>None</code></em>, <strong><code>chem_path</code></strong>=<em><code>None</code></em>, <strong><code>chem_plate</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Add_layout function updates DataFrame containing measurements with descriptors columns taken from plate layout excel file.
-Sheet names in the layout file are translated to column names in the updated DataFrame.
-</p>
+Sheet names in the layout file are translated to column names in the updated DataFrame.</p>
 
 </div>
 
@@ -353,16 +299,16 @@ Sheet names in the layout file are translated to column names in the updated Dat
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div align="justify">Add_layout function takes DataFrame, the path to layout excel file, the path to chemical library and plate name, and returns an updated DataFrame with added layout columns. We use a layout excel file to describe the experimental design, and the names of the excel sheets become the names of the columns in a final data table. Each excel sheet contains a table with dimensions of the experiment plate (usually 96 or 384-well plates) and represents some aspect of the layout - well ID, treatment, cell density, compound ID, compound concentration, etc.
-The layout file must contain sheets named 'Well' and 'Status'. The 'Well' table lists well IDs, and the 'Status' can contain either 'Sample', 'Positive' or 'Negative' control, or 'Reference' values. 'Reference' wells are excluded from calculations. The function add_layout merges measurements and layout by the 'Well' column.</div><p>{% include image.html style="float: left; margin-right:700px" max-width="850" file="/simplydrug/hts_notebooks/hts_images/layout.png" %}</p>
+The layout file must contain sheets named 'Well' and 'Status'. The 'Well' table lists well IDs, and the 'Status' can contain either 'Sample', 'Positive' or 'Negative' control, or 'Reference' values. 'Reference' wells are excluded from calculations. The function add_layout merges measurements and layout by the 'Well' column.</div><p>{% include image.html style="float: left; margin-right:700px" max-width="850" file="/hts_notebooks/hts_images/layout.png" %}</p>
 <div align="justify"> Next, we need to import compound ids from chemical library. There are two options. We can fill compound ids manually in the layout excel, or we can give to the function the plate name from defined library. In this module, we will use example_chemicals.csv file located in Resources. The name of the library is 'example_library', it contains random compounds divided into 3 plates: 'ex_plate1', 'ex_plate2', and 'ex_plate3'
-For example, to load compounds from plate 3 of the library, we will pass to the function chem_path = '..//resources//compounds//example_chemicals.csv, and chem_plate = 'ex_plate3'.</div><p>{% include image.html style="float: left; margin-right:700px" max-width="750" file="/simplydrug/hts_notebooks/hts_images/chemlib.png" %}</p>
+For example, to load compounds from plate 3 of the library, we will pass to the function chem_path = '..//resources//compounds//example_chemicals.csv, and chem_plate = 'ex_plate3'.</div><p>{% include image.html style="float: left; margin-right:700px" max-width="750" file="/hts_notebooks/hts_images/chemlib.png" %}</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="QC">Quality Control<a class="anchor-link" href="#QC"> </a></h3>
+<h2 id="Quality-control">Quality control<a class="anchor-link" href="#Quality-control"> </a></h2>
 </div>
 </div>
 </div>
@@ -390,7 +336,7 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="order_wells" class="doc_header"><code>order_wells</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L55" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>order_wells</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="order_wells" class="doc_header"><code>order_wells</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L47" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>order_wells</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -414,20 +360,6 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;A1&#39;, &#39;A2&#39;, &#39;A10&#39;, &#39;A11&#39;, &#39;A12&#39;]
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -458,10 +390,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="hts_heatmap" class="doc_header"><code>hts_heatmap</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L66" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>hts_heatmap</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>layout_path</code></strong>=<em><code>None</code></em>, <strong><code>features</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="hts_heatmap" class="doc_header"><code>hts_heatmap</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L56" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>hts_heatmap</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>layout_path</code></strong>=<em><code>None</code></em>, <strong><code>features</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Takes DataFrame, list of features, a path to layout file, and the output folder and creates a plate heatmap for the input features.
-</p>
+<p>Takes DataFrame, list of features, a path to layout file, and the output folder and creates a plate heatmap for the input features.</p>
 
 </div>
 
@@ -475,7 +406,7 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Summary-Statistics">Summary statistics<a class="anchor-link" href="#Summary-Statistics"> </a></h4>
+<h4 id="Summary-statistics">Summary statistics<a class="anchor-link" href="#Summary-statistics"> </a></h4>
 </div>
 </div>
 </div>
@@ -497,10 +428,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="sum_statistics" class="doc_header"><code>sum_statistics</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L126" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sum_statistics</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="sum_statistics" class="doc_header"><code>sum_statistics</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L110" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sum_statistics</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Takes DataFrame and calculates summary statistics for the experiment. The data must contain the 'Status' column, defining each row as 'Sample', 'Positive' or 'Negative' control, or 'Reference'.  'Reference' wells are excluded from the analysis.
-</p>
+<p>Takes DataFrame and calculates summary statistics for the experiment. The data must contain the 'Status' column, defining each row as 'Sample', 'Positive' or 'Negative' control, or 'Reference'.  'Reference' wells are excluded from the analysis.</p>
 
 </div>
 
@@ -514,7 +444,7 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Z-score-Normalization">Z-score normalization<a class="anchor-link" href="#Z-score-Normalization"> </a></h4>
+<h4 id="Z-score-normalization">Z-score normalization<a class="anchor-link" href="#Z-score-normalization"> </a></h4>
 </div>
 </div>
 </div>
@@ -536,11 +466,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="normalize_z" class="doc_header"><code>normalize_z</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L155" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>normalize_z</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="normalize_z" class="doc_header"><code>normalize_z</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L134" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>normalize_z</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Takes DataFrame with measurements and feature name and adds a column with
-normalized values of the feature.
-</p>
+<p>Takes DataFrame with measurements and feature name and adds a column with normalized values of the feature.</p>
 
 </div>
 
@@ -570,10 +498,9 @@ normalized values of the feature.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="histogram_feature" class="doc_header"><code>histogram_feature</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L170" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>histogram_feature</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="histogram_feature" class="doc_header"><code>histogram_feature</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L144" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>histogram_feature</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Creates histogram of the input feature.
-</p>
+<p>Creates histogram of the input feature.</p>
 
 </div>
 
@@ -587,7 +514,7 @@ normalized values of the feature.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Growth-Score-functions">Growth score functions<a class="anchor-link" href="#Growth-Score-functions"> </a></h3>
+<h3 id="Growth-score-functions">Growth score functions<a class="anchor-link" href="#Growth-score-functions"> </a></h3>
 </div>
 </div>
 </div>
@@ -609,9 +536,9 @@ normalized values of the feature.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="calculate_growth_score" class="doc_header"><code>calculate_growth_score</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L193" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calculate_growth_score</code>(<strong><code>df</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="calculate_growth_score" class="doc_header"><code>calculate_growth_score</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L162" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calculate_growth_score</code>(<strong><code>df</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Calculates growth scores from time series data. Takes a pandas DataFrame with time-series data and returns DataFrame with growth scores.</p>
+<p>Calculates growth scores from time series data. Takes pandas DataFrame with time-series data and returns DataFrame with growth scores.</p>
 
 </div>
 
@@ -655,10 +582,9 @@ normalized values of the feature.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="filter_curves" class="doc_header"><code>filter_curves</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L221" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>filter_curves</code>(<strong><code>df</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="filter_curves" class="doc_header"><code>filter_curves</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L188" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>filter_curves</code>(<strong><code>df</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Filter out aberrant curves.
-</p>
+<p>Filter out aberrant curves.</p>
 
 </div>
 
@@ -700,9 +626,9 @@ normalized values of the feature.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="ll4" class="doc_header"><code>ll4</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L248" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ll4</code>(<strong><code>x</code></strong>, <strong><code>b</code></strong>, <strong><code>c</code></strong>, <strong><code>d</code></strong>, <strong><code>e</code></strong>)</p>
+<h4 id="ll4" class="doc_header"><code>ll4</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L213" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ll4</code>(<strong><code>x</code></strong>, <strong><code>b</code></strong>, <strong><code>c</code></strong>, <strong><code>d</code></strong>, <strong><code>e</code></strong>)</p>
 </blockquote>
-<p>Fitting dose-response function - LM equation, LL.4 function (4-parameter sigmoidal function).</p>
+<p>Dose-response function - LM equation, LL.4 function (4-parameter sigmoidal function).</p>
 <ul>
 <li>b: hill slope</li>
 <li>c: min response</li>
@@ -738,7 +664,7 @@ normalized values of the feature.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="inv_log" class="doc_header"><code>inv_log</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L261" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>inv_log</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="inv_log" class="doc_header"><code>inv_log</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L225" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>inv_log</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Inverse log calculator</p>
 
@@ -770,7 +696,7 @@ normalized values of the feature.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="pDose" class="doc_header"><code>pDose</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L267" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>pDose</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="pDose" class="doc_header"><code>pDose</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L230" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>pDose</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Helper function, used to compute log transformed concentrations.</p>
 
@@ -802,7 +728,7 @@ normalized values of the feature.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="dose_response" class="doc_header"><code>dose_response</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L274" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dose_response</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="dose_response" class="doc_header"><code>dose_response</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L236" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dose_response</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Dose response function. The input DataFrame should contain columns 'Compound_id', 'Dose', 'Response'.
 The DataFrame shouldn't contain NAN values or dose 0, which will result in infinity at logDose.
@@ -811,8 +737,7 @@ The fitting function is a LL.4 function (4-parameter sigmoidal function) with</p
 <li>b: hill slope</li>
 <li>c: min response</li>
 <li>d: max response</li>
-<li>e: EC50
-</li>
+<li>e: EC50</li>
 </ul>
 
 </div>
@@ -843,7 +768,7 @@ The fitting function is a LL.4 function (4-parameter sigmoidal function) with</p
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_dr_viability" class="doc_header"><code>plot_dr_viability</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L358" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_dr_viability</code>(<strong><code>data</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="plot_dr_viability" class="doc_header"><code>plot_dr_viability</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L316" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_dr_viability</code>(<strong><code>data</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Plots response vs viability. The DataFrame should contain columns ['Compound', 'Dose','logDose', 'Viability', 'Response'] (at least).</p>
 
@@ -875,7 +800,7 @@ The fitting function is a LL.4 function (4-parameter sigmoidal function) with</p
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="prune_compound" class="doc_header"><code>prune_compound</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L410" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>prune_compound</code>(<strong><code>df</code></strong>, <strong><code>threshold</code></strong>=<em><code>-0.15</code></em>)</p>
+<h4 id="prune_compound" class="doc_header"><code>prune_compound</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L367" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>prune_compound</code>(<strong><code>df</code></strong>, <strong><code>threshold</code></strong>=<em><code>-0.15</code></em>)</p>
 </blockquote>
 <p>This function takes DataFrame of one-compound dose-response data, find maximum activity,
  and drops rows starting from treshold-defined reduction of Response. The default value for threshold = -0.15,
@@ -910,10 +835,9 @@ it drops rows starting from 15% reduction of Response. The input DataFrame shoul
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_polynomial" class="doc_header"><code>plot_polynomial</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L430" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_polynomial</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>degree</code></strong>=<em><code>2</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="plot_polynomial" class="doc_header"><code>plot_polynomial</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L387" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_polynomial</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>degree</code></strong>=<em><code>2</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Plot polynomial fit.
-</p>
+<p>Plot polynomial fit.</p>
 
 </div>
 
@@ -949,10 +873,9 @@ it drops rows starting from 15% reduction of Response. The input DataFrame shoul
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_treatments" class="doc_header"><code>plot_treatments</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L481" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_treatments</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>column</code></strong>=<em><code>None</code></em>, <strong><code>kind</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>height</code></strong>=<em><code>None</code></em>, <strong><code>aspect</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="plot_treatments" class="doc_header"><code>plot_treatments</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L433" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_treatments</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>column</code></strong>=<em><code>None</code></em>, <strong><code>kind</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>height</code></strong>=<em><code>None</code></em>, <strong><code>aspect</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Creates plot by treatments. If your data has different treatments, set column = 'Treatment'.
-</p>
+<p>Creates plot by treatments. If your data has different treatments, set column = 'Treatment'.</p>
 
 </div>
 
@@ -982,10 +905,9 @@ it drops rows starting from 15% reduction of Response. The input DataFrame shoul
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_curve_raw" class="doc_header"><code>plot_curve_raw</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L509" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_curve_raw</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>units</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>xlabel</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>xlimit</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="plot_curve_raw" class="doc_header"><code>plot_curve_raw</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L455" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_curve_raw</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>units</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>xlabel</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>xlimit</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Plots raw kinetic curves.
-</p>
+<p>Plots raw kinetic curves.</p>
 
 </div>
 
@@ -1015,10 +937,9 @@ it drops rows starting from 15% reduction of Response. The input DataFrame shoul
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_curve_mean" class="doc_header"><code>plot_curve_mean</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L538" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_curve_mean</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>xlabel</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>xlimit</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="plot_curve_mean" class="doc_header"><code>plot_curve_mean</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L478" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_curve_mean</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>xlabel</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>xlimit</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Plots mean kinetic curves.
-</p>
+<p>Plots mean kinetic curves.</p>
 
 </div>
 
@@ -1048,10 +969,9 @@ it drops rows starting from 15% reduction of Response. The input DataFrame shoul
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="pointplot_plate" class="doc_header"><code>pointplot_plate</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L568" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>pointplot_plate</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>threshold</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="pointplot_plate" class="doc_header"><code>pointplot_plate</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L501" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>pointplot_plate</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>threshold</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Creates point plot for the experiment.
-</p>
+<p>Creates point plot for the experiment.</p>
 
 </div>
 
@@ -1087,12 +1007,11 @@ it drops rows starting from 15% reduction of Response. The input DataFrame shoul
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="df_to_table" class="doc_header"><code>df_to_table</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L600" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>df_to_table</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>slide</code></strong>=<em><code>None</code></em>, <strong><code>left</code></strong>=<em><code>None</code></em>, <strong><code>top</code></strong>=<em><code>None</code></em>, <strong><code>width</code></strong>=<em><code>None</code></em>, <strong><code>height</code></strong>=<em><code>None</code></em>, <strong><code>colnames</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="df_to_table" class="doc_header"><code>df_to_table</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L526" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>df_to_table</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>slide</code></strong>=<em><code>None</code></em>, <strong><code>left</code></strong>=<em><code>None</code></em>, <strong><code>top</code></strong>=<em><code>None</code></em>, <strong><code>width</code></strong>=<em><code>None</code></em>, <strong><code>height</code></strong>=<em><code>None</code></em>, <strong><code>colnames</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Converts a Pandas DataFrame to a PowerPoint table on the given slide of a PowerPoint presentation.
 The table is a standard Powerpoint table, and can easily be modified with the Powerpoint tools (resizing columns, changing formatting etc).
-Source:  <a href="https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py">https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py</a>
-</p>
+Source:  <a href="https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py">https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py</a></p>
 
 </div>
 
@@ -1122,12 +1041,9 @@ Source:  <a href="https://github.com/robintw/PandasToPowerpoint/blob/master/Pand
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="create_presentation" class="doc_header"><code>create_presentation</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L642" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_presentation</code>(<strong><code>path</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="create_presentation" class="doc_header"><code>create_presentation</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L563" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_presentation</code>(<strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-<p>Creates ppt report from files in the specified folder.
-Reads template ppt file and files in the input folder, adds all pictures and tables with
-size less than 30 rows from input folder.
-</p>
+<p>Creates ppt report from files in the specified folder.</p>
 
 </div>
 
@@ -1138,16 +1054,7 @@ size less than 30 rows from input folder.
 
 </div>
     {% endraw %}
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Copyright">Copyright<a class="anchor-link" href="#Copyright"> </a></h2>
-<p>Copyright 2020 onwards, Blavatnik Center for Drug Discovery. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project's files except in compliance with the License. A copy of the License is provided in the LICENSE file in this repository.
-</p>
 
 </div>
-</div>
-</div>
+ 
 
-</div>
-</div>
-</div>
