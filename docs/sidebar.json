@@ -1,6 +1,12 @@
 {
   "simplydrug": {
-    "Overview": "/",
-    "Title": "/simplydrug"
+    "Welcome to simplydrug": "/Welcome to simplydrug",
+    "List of notebooks": "/List of notebooks",
+	"Install": "/Install",
+	"Dependencies": "/Dependencies",
+	"Example usage": "/Example usage",
+	"Functionality": "/Functionality",
+	"Copyright": "/Copyright",
+	
   }
 }
