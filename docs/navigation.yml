@@ -1,0 +1,15 @@
+sidebar:
+ - title: "Welcome to simplydrug"
+   url: /Welcome to simplydrug
+ - title: "List of notebooks"
+   url: /List of notebooks
+ - title:	"Install"
+   url: /Install
+ - title:	"Dependencies"
+   url: /Dependencies
+ - title: "Example usage"
+   url: /Example usage
+ - title: "Functionality"
+   url: /Functionality
+ - title: "Copyright"
+   url: /Copyright"
