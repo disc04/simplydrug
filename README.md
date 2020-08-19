@@ -1,4 +1,3 @@
-
 ## Welcome to simplydrug
 
 
@@ -120,7 +119,7 @@ sd.hts_heatmap(df = results, layout_path = layout_path, features = ['120s'], pat
 
 Please refer to the [documentation](https://disc04.github.io/simplydrug/) page for more information.
 
-### Copyright
+## Copyright
 
 <div align="justify"> Copyright 2020 onwards, Blavatnik Center for Drug Discovery. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project's files except in compliance with the License. A copy of the License is provided in the LICENSE file in this repository.
 </div>
