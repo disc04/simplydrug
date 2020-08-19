@@ -27,7 +27,7 @@ index = {"exception_handler": "index.ipynb",
 
 modules = ["core.py"]
 
-doc_url = "https://disc04.github.io/docs"
+doc_url = "https://disc04.github.io/"
 
 git_url = "https://github.com/disc04/simplydrug/tree/master/"
 

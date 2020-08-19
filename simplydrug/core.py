@@ -20,7 +20,6 @@ def exception_handler(func):
 
 # Cell
 @exception_handler
-#export
 def add_layout(df = None, layout_path = None, chem_path = None, chem_plate = None):
     """Add_layout function updates DataFrame containing measurements with descriptors columns taken from plate layout excel file.
     Sheet names in the layout file are translated to column names in the updated DataFrame.
@@ -47,7 +46,6 @@ def add_layout(df = None, layout_path = None, chem_path = None, chem_plate = Non
 
 # Cell
 @exception_handler
-#export
 def order_wells(x = None):
     import re
     """Orders wells as they appear in the plate. For example, converts ['A10', 'A11', 'A12', 'A1', 'A2'] to ['A1', 'A2', 'A10', 'A11', 'A12'].
@@ -58,7 +56,6 @@ def order_wells(x = None):
 
 # Cell
 @exception_handler
-#export
 def hts_heatmap(df = None, layout_path = None, features = None, save_as = None, path = None):
     """Takes DataFrame, list of features, a path to layout file, and the output folder and creates a plate heatmap for the input features.
     """
@@ -114,7 +111,6 @@ def hts_heatmap(df = None, layout_path = None, features = None, save_as = None, 
 
 # Cell
 @exception_handler
-#export
 def sum_statistics(df = None, feature = None):
     """Takes DataFrame and calculates summary statistics for the experiment. The data must contain the 'Status' column, defining each row as 'Sample', 'Positive' or 'Negative' control, or 'Reference'.  'Reference' wells are excluded from the analysis.
     """
@@ -140,7 +136,6 @@ def sum_statistics(df = None, feature = None):
 
 # Cell
 @exception_handler
-#export
 def normalize_z(df = None, feature = None):
     """Takes DataFrame with measurements and feature name and adds a column with normalized values of the feature.
     """
@@ -152,7 +147,6 @@ def normalize_z(df = None, feature = None):
 
 # Cell
 @exception_handler
-#export
 def histogram_feature(df = None, feature = None, save_as = None, path = None):
     """Creates histogram of the input feature.
     """
@@ -172,7 +166,6 @@ def histogram_feature(df = None, feature = None, save_as = None, path = None):
 
 # Cell
 @exception_handler
-#export
 def calculate_growth_score(df = None):
     """Calculates growth scores from time series data. Takes pandas DataFrame with time-series data and returns DataFrame with growth scores.
     """
@@ -200,7 +193,6 @@ def calculate_growth_score(df = None):
 
 # Cell
 @exception_handler
-#export
 def filter_curves(df = None):
     """Filter out aberrant curves.
     """
@@ -227,7 +219,6 @@ def filter_curves(df = None):
 
 # Cell
 @exception_handler
-#export
 def ll4(x,b,c,d,e):
     """Dose-response function - LM equation, LL.4 function (4-parameter sigmoidal function).
      - b: hill slope
@@ -241,14 +232,12 @@ def ll4(x,b,c,d,e):
 
 # Cell
 @exception_handler
-#export
 def inv_log(x = None):
     """Inverse log calculator"""
     return ((10**-x)/(1e-6))
 
 # Cell
 @exception_handler
-#export
 def pDose(x = None):
     """Helper function, used to compute log transformed concentrations."""
     import numpy as np
@@ -256,7 +245,6 @@ def pDose(x = None):
 
 # Cell
 @exception_handler
-#export
 def dose_response(df = None, y_label = 'Response', path = None):
     """Dose response function. The input DataFrame should contain columns 'Compound_id', 'Dose', 'Response'.
     The DataFrame shouldn't contain NAN values or dose 0, which will result in infinity at logDose.
@@ -338,7 +326,6 @@ def dose_response(df = None, y_label = 'Response', path = None):
 
 # Cell
 @exception_handler
-#export
 def plot_dr_viability(data = None, y_label = 'Response', path = None):
     """Plots response vs viability. The DataFrame should contain columns ['Compound', 'Dose','logDose', 'Viability', 'Response'] (at least)."""
     import pandas as pd
@@ -391,7 +378,6 @@ def plot_dr_viability(data = None, y_label = 'Response', path = None):
 
 # Cell
 @exception_handler
-#export
 def prune_compound(df, threshold = -0.15):
     """This function takes DataFrame of one-compound dose-response data, find maximum activity,
     and drops rows starting from treshold-defined reduction of Response. The default value for threshold = -0.15,
@@ -413,7 +399,6 @@ def prune_compound(df, threshold = -0.15):
 
 # Cell
 @exception_handler
-#export
 def plot_polynomial(df = None, y_label = 'Response', degree = 2, path = None):
     """Plot polynomial fit.
     """
@@ -461,7 +446,6 @@ def plot_polynomial(df = None, y_label = 'Response', degree = 2, path = None):
 
 # Cell
 @exception_handler
-#export
 def plot_treatments(df = None, x = None, y = None, column = None, kind = None, ylabel = None,
                     palette = None, height = None, aspect = None, save_as = None, path = None):
     """Creates plot by treatments. If your data has different treatments, set column = 'Treatment'.
@@ -485,7 +469,6 @@ def plot_treatments(df = None, x = None, y = None, column = None, kind = None, y
 
 # Cell
 @exception_handler
-#export
 def plot_curve_raw(df = None, x = None, y = None, units = None, hue = None, hue_order = None, xlabel = None,
                    ylabel = None, xlimit = None, palette = None, save_as = None, path = None):
     """Plots raw kinetic curves.
@@ -510,7 +493,6 @@ def plot_curve_raw(df = None, x = None, y = None, units = None, hue = None, hue_
 
 # Cell
 @exception_handler
-#export
 def plot_curve_mean(df = None, x = None, y = None, hue = None, hue_order = None, xlabel = None, ylabel = None,
                     xlimit = None, palette = None, save_as = None, path = None):
     """Plots mean kinetic curves.
@@ -535,7 +517,6 @@ def plot_curve_mean(df = None, x = None, y = None, hue = None, hue_order = None,
 
 # Cell
 @exception_handler
-#export
 def pointplot_plate(df = None, x = None, y = None, hue = None, hue_order = None, threshold = None, ylabel = None,
                     palette = None,  save_as = None, path  = None):
     """Creates point plot for the experiment.
@@ -562,7 +543,6 @@ def pointplot_plate(df = None, x = None, y = None, hue = None, hue_order = None,
 
 # Cell
 @exception_handler
-#export
 def df_to_table(df = None, slide = None, left = None, top = None, width = None, height = None, colnames = None):
     """Converts a Pandas DataFrame to a PowerPoint table on the given slide of a PowerPoint presentation.
     The table is a standard Powerpoint table, and can easily be modified with the Powerpoint tools (resizing columns, changing formatting etc).
@@ -601,7 +581,6 @@ def df_to_table(df = None, slide = None, left = None, top = None, width = None, 
 
 # Cell
 @exception_handler
-#export
 def create_presentation(path = None):
     """Creates ppt report from files in the specified folder.
     """

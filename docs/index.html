@@ -198,7 +198,8 @@ Dose-response assay for compound toxicity.</li>
 
 
 <div class="output_html rendered_html output_subarea ">
-
+<div>
+</div>
 </div>
 
 </div>
@@ -309,8 +310,10 @@ Dose-response assay for compound toxicity.</li>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="add_layout" class="doc_header"><code>add_layout</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>add_layout</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>layout_path</code></strong>=<em><code>None</code></em>, <strong><code>chem_path</code></strong>=<em><code>None</code></em>, <strong><code>chem_plate</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Add_layout function updates DataFrame containing measurements with descriptors columns taken from plate layout excel file.
+Sheet names in the layout file are translated to column names in the updated DataFrame.</p>
 
 </div>
 
@@ -340,6 +343,13 @@ The layout file must contain sheets named 'Well' and 'Status'. The 'Well' table 
 <div class="text_cell_render border-box-sizing rendered_html">
 <div align="justify"> Next, we need to import compound ids from chemical library. There are two options. We can fill compound ids manually in the layout excel, or we can give to the function the plate name from defined library. In this module, we will use example_chemicals.csv file located in hts_data/compounds. The name of the library is 'example_library', it contains random compounds divided into 3 plates: 'ex_plate1', 'ex_plate2', and 'ex_plate3'
 For example, to load compounds from plate 3 of the library, we will pass to the function chem_path = 'hts_data//compounds//example_chemicals.csv, and chem_plate = 'ex_plate3'.</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example of chemical library file:</strong></p>
+
 </div>
 </div>
 </div>
@@ -380,7 +390,7 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="order_wells" class="doc_header"><code>order_wells</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L49" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>order_wells</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -417,8 +427,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="hts_heatmap" class="doc_header"><code>hts_heatmap</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L59" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>hts_heatmap</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>layout_path</code></strong>=<em><code>None</code></em>, <strong><code>features</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Takes DataFrame, list of features, a path to layout file, and the output folder and creates a plate heatmap for the input features.</p>
 
 </div>
 
@@ -454,8 +465,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="sum_statistics" class="doc_header"><code>sum_statistics</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L114" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sum_statistics</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Takes DataFrame and calculates summary statistics for the experiment. The data must contain the 'Status' column, defining each row as 'Sample', 'Positive' or 'Negative' control, or 'Reference'.  'Reference' wells are excluded from the analysis.</p>
 
 </div>
 
@@ -491,8 +503,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="normalize_z" class="doc_header"><code>normalize_z</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L139" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>normalize_z</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Takes DataFrame with measurements and feature name and adds a column with normalized values of the feature.</p>
 
 </div>
 
@@ -522,8 +535,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="histogram_feature" class="doc_header"><code>histogram_feature</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L150" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>histogram_feature</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>feature</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Creates histogram of the input feature.</p>
 
 </div>
 
@@ -559,8 +573,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="calculate_growth_score" class="doc_header"><code>calculate_growth_score</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L169" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calculate_growth_score</code>(<strong><code>df</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Calculates growth scores from time series data. Takes pandas DataFrame with time-series data and returns DataFrame with growth scores.</p>
 
 </div>
 
@@ -604,8 +619,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="filter_curves" class="doc_header"><code>filter_curves</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L196" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>filter_curves</code>(<strong><code>df</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Filter out aberrant curves.</p>
 
 </div>
 
@@ -647,8 +663,15 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="ll4" class="doc_header"><code>ll4</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L222" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ll4</code>(<strong><code>x</code></strong>, <strong><code>b</code></strong>, <strong><code>c</code></strong>, <strong><code>d</code></strong>, <strong><code>e</code></strong>)</p>
 </blockquote>
+<p>Dose-response function - LM equation, LL.4 function (4-parameter sigmoidal function).</p>
+<ul>
+<li>b: hill slope</li>
+<li>c: min response</li>
+<li>d: max response</li>
+<li>e: EC50</li>
+</ul>
 
 </div>
 
@@ -678,8 +701,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="inv_log" class="doc_header"><code>inv_log</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L235" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>inv_log</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Inverse log calculator</p>
 
 </div>
 
@@ -709,8 +733,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="pDose" class="doc_header"><code>pDose</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L241" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>pDose</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Helper function, used to compute log transformed concentrations.</p>
 
 </div>
 
@@ -740,8 +765,17 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="dose_response" class="doc_header"><code>dose_response</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L248" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dose_response</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Dose response function. The input DataFrame should contain columns 'Compound_id', 'Dose', 'Response'.
+The DataFrame shouldn't contain NAN values or dose 0, which will result in infinity at logDose.
+The fitting function is a LL.4 function (4-parameter sigmoidal function) with</p>
+<ul>
+<li>b: hill slope</li>
+<li>c: min response</li>
+<li>d: max response</li>
+<li>e: EC50</li>
+</ul>
 
 </div>
 
@@ -771,8 +805,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="plot_dr_viability" class="doc_header"><code>plot_dr_viability</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L329" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_dr_viability</code>(<strong><code>data</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Plots response vs viability. The DataFrame should contain columns ['Compound', 'Dose','logDose', 'Viability', 'Response'] (at least).</p>
 
 </div>
 
@@ -802,8 +837,12 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="prune_compound" class="doc_header"><code>prune_compound</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L381" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>prune_compound</code>(<strong><code>df</code></strong>, <strong><code>threshold</code></strong>=<em><code>-0.15</code></em>)</p>
 </blockquote>
+<p>This function takes DataFrame of one-compound dose-response data, find maximum activity,
+ and drops rows starting from treshold-defined reduction of Response. The default value for threshold = -0.15,
+it drops rows starting from 15% reduction of Response. The input DataFrame should contain columns
+'Compound_id', 'Dose', 'Response'.</p>
 
 </div>
 
@@ -833,8 +872,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="plot_polynomial" class="doc_header"><code>plot_polynomial</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L402" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_polynomial</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>y_label</code></strong>=<em><code>'Response'</code></em>, <strong><code>degree</code></strong>=<em><code>2</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Plot polynomial fit.</p>
 
 </div>
 
@@ -870,8 +910,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="plot_treatments" class="doc_header"><code>plot_treatments</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L449" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_treatments</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>column</code></strong>=<em><code>None</code></em>, <strong><code>kind</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>height</code></strong>=<em><code>None</code></em>, <strong><code>aspect</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Creates plot by treatments. If your data has different treatments, set column = 'Treatment'.</p>
 
 </div>
 
@@ -901,8 +942,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="plot_curve_raw" class="doc_header"><code>plot_curve_raw</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L472" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_curve_raw</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>units</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>xlabel</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>xlimit</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Plots raw kinetic curves.</p>
 
 </div>
 
@@ -932,8 +974,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="plot_curve_mean" class="doc_header"><code>plot_curve_mean</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L496" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_curve_mean</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>xlabel</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>xlimit</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Plots mean kinetic curves.</p>
 
 </div>
 
@@ -963,8 +1006,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="pointplot_plate" class="doc_header"><code>pointplot_plate</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L520" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>pointplot_plate</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>x</code></strong>=<em><code>None</code></em>, <strong><code>y</code></strong>=<em><code>None</code></em>, <strong><code>hue</code></strong>=<em><code>None</code></em>, <strong><code>hue_order</code></strong>=<em><code>None</code></em>, <strong><code>threshold</code></strong>=<em><code>None</code></em>, <strong><code>ylabel</code></strong>=<em><code>None</code></em>, <strong><code>palette</code></strong>=<em><code>None</code></em>, <strong><code>save_as</code></strong>=<em><code>None</code></em>, <strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Creates point plot for the experiment.</p>
 
 </div>
 
@@ -1000,8 +1044,11 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="df_to_table" class="doc_header"><code>df_to_table</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L546" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>df_to_table</code>(<strong><code>df</code></strong>=<em><code>None</code></em>, <strong><code>slide</code></strong>=<em><code>None</code></em>, <strong><code>left</code></strong>=<em><code>None</code></em>, <strong><code>top</code></strong>=<em><code>None</code></em>, <strong><code>width</code></strong>=<em><code>None</code></em>, <strong><code>height</code></strong>=<em><code>None</code></em>, <strong><code>colnames</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Converts a Pandas DataFrame to a PowerPoint table on the given slide of a PowerPoint presentation.
+The table is a standard Powerpoint table, and can easily be modified with the Powerpoint tools (resizing columns, changing formatting etc).
+Source:  <a href="https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py">https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py</a></p>
 
 </div>
 
@@ -1031,8 +1078,9 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exception_handler.<locals>.wrapper_func" class="doc_header"><code>exception_handler.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exception_handler.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="create_presentation" class="doc_header"><code>create_presentation</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L584" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_presentation</code>(<strong><code>path</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>Creates ppt report from files in the specified folder.</p>
 
 </div>
 
