@@ -237,7 +237,7 @@ def inv_log(x = None):
     return ((10**-x)/(1e-6))
 
 # Cell
-@exception_handler
+
 def pDose(x = None):
     """Helper function, used to compute log transformed concentrations."""
     import numpy as np
