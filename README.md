@@ -116,7 +116,7 @@ sd.hts_heatmap(df = results, layout_path = layout_path, features = ['120s'], pat
 <img style="float: left; margin-right:700px" width="500" src="hts_notebooks/hts_images/index_heatmap.png">
 
 <div align="justify"> In this plate, most of the readings across the plate are close to the plate average, and four wells with high readings probably represent our hit compounds.</div>
-<div align="justify"> Please refer to documentation page for more information.</div>
+<div align="justify"> Please refer to the documentation page for more information.</div>
 
 
 ### Copyright
