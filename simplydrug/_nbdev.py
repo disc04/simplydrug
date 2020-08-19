@@ -2,32 +2,32 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"exception_handler": "simplydrug.ipynb",
-         "add_layout": "simplydrug.ipynb",
-         "order_wells": "simplydrug.ipynb",
-         "hts_heatmap": "simplydrug.ipynb",
-         "sum_statistics": "simplydrug.ipynb",
-         "normalize_z": "simplydrug.ipynb",
-         "histogram_feature": "simplydrug.ipynb",
-         "calculate_growth_score": "simplydrug.ipynb",
-         "filter_curves": "simplydrug.ipynb",
-         "ll4": "simplydrug.ipynb",
-         "inv_log": "simplydrug.ipynb",
-         "pDose": "simplydrug.ipynb",
-         "dose_response": "simplydrug.ipynb",
-         "plot_dr_viability": "simplydrug.ipynb",
-         "prune_compound": "simplydrug.ipynb",
-         "plot_polynomial": "simplydrug.ipynb",
-         "plot_treatments": "simplydrug.ipynb",
-         "plot_curve_raw": "simplydrug.ipynb",
-         "plot_curve_mean": "simplydrug.ipynb",
-         "pointplot_plate": "simplydrug.ipynb",
-         "df_to_table": "simplydrug.ipynb",
-         "create_presentation": "simplydrug.ipynb"}
+index = {"exception_handler": "index.ipynb",
+         "add_layout": "index.ipynb",
+         "order_wells": "index.ipynb",
+         "hts_heatmap": "index.ipynb",
+         "sum_statistics": "index.ipynb",
+         "normalize_z": "index.ipynb",
+         "histogram_feature": "index.ipynb",
+         "calculate_growth_score": "index.ipynb",
+         "filter_curves": "index.ipynb",
+         "ll4": "index.ipynb",
+         "inv_log": "index.ipynb",
+         "pDose": "index.ipynb",
+         "dose_response": "index.ipynb",
+         "plot_dr_viability": "index.ipynb",
+         "prune_compound": "index.ipynb",
+         "plot_polynomial": "index.ipynb",
+         "plot_treatments": "index.ipynb",
+         "plot_curve_raw": "index.ipynb",
+         "plot_curve_mean": "index.ipynb",
+         "pointplot_plate": "index.ipynb",
+         "df_to_table": "index.ipynb",
+         "create_presentation": "index.ipynb"}
 
 modules = ["core.py"]
 
-doc_url = "https://disc04.github.io/"
+doc_url = "https://disc04.github.io/docs"
 
 git_url = "https://github.com/disc04/simplydrug/tree/master/"
 
