@@ -15,6 +15,7 @@ nb_path: "index.ipynb"
 
 -->
 
+
 <div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -24,8 +25,10 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><div align="justify"> To advance scientific communication and integrative drug discovery, we developed a set of open-source based analysis workflows. These workflows describe the early stages of biological assay development and high throughput screening and provide a hands-on introduction to Drug Discovery for everybody with basic knowledge of biology, python programming, or data science. </div><\p>
-<p><img src="./hts_notebooks/hts_images/bcdd.png" style="float: left; margin-right:700px" max-width="450"/></p>
+<p><div align="justify"> To advance scientific communication and integrative drug discovery, we developed a set of open-source based analysis workflows. These workflows describe the early stages of biological assay development and high throughput screening and provide a hands-on introduction to Drug Discovery for everybody with basic knowledge of biology, python programming, or data science. </div></p>
+<div>
+<p><img src="./hts_notebooks/hts_images/bcdd.png" style="float: left; margin-right:700px" max-width="350"/></p>
+</div>
 </div>
 </div>
 </div>
@@ -174,9 +177,9 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<p><img src="./hts_notebooks/hts_images/index_df.png" style="float: left; margin-right:700px" max-width="950"/></p>
-
+<div>
+<p><img src="./hts_notebooks/hts_images/index_df.png" style="float: left; margin-right:700px" max-width="550"/></p>
+</div>
 </div>
 </div>
 </div>
@@ -206,9 +209,9 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<p><img src="./hts_notebooks/hts_images/index_heatmap.png" style="float: left; margin-right:700px" max-width="550"/></p>
-
+<div>
+<p><img src="./hts_notebooks/hts_images/index_heatmap.png" style="float: left; margin-right:700px" max-width="450"/></p>
+</div>
 </div>
 </div>
 </div>
@@ -294,13 +297,15 @@ Sheet names in the layout file are translated to column names in the updated Dat
 <div align="justify">Add_layout function takes DataFrame, the path to layout excel file, the path to chemical library and plate name, and returns an updated DataFrame with added layout columns. We use a layout excel file to describe the experimental design, and the names of the excel sheets become the names of the columns in a final data table. Each excel sheet contains a table with dimensions of the experiment plate (usually 96 or 384-well plates) and represents some aspect of the layout - well ID, treatment, cell density, compound ID, compound concentration, etc.
 The layout file must contain sheets named 'Well' and 'Status'. The 'Well' table lists well IDs, and the 'Status' can contain either 'Sample', 'Positive' or 'Negative' control, or 'Reference' values. 'Reference' wells are excluded from calculations. The function add_layout merges measurements and layout by the 'Well' column.
 </div>
-<p><img src="https://github.com/disc04/simplydrug/tree/master/docs/hts_images/layout.png" style="float: left; margin-right:700px" max-width="850"></p>
 
+<div>
+<p><img src="./hts_images/layout.png" style="float: left; margin-right:700px" max-width="450"></p>
+</div>
 <p>{% include image.html style="float: left; margin-right:700px" max-width="850" file="/hts_notebooks/hts_images/layout.png" %}</p>
 <div align="justify"> Next, we need to import compound ids from chemical library. There are two options. We can fill compound ids manually in the layout excel, or we can give to the function the plate name from defined library. In this module, we will use example_chemicals.csv file located in hts_data/compounds. The name of the library is 'example_library', it contains random compounds divided into 3 plates: 'ex_plate1', 'ex_plate2', and 'ex_plate3'
 For example, to load compounds from plate 3 of the library, we will pass to the function chem_path = 'hts_data//compounds//example_chemicals.csv, and chem_plate = 'ex_plate3'.
 </div>
-<p><img src="./hts_notebooks/hts_images/chemlib.png" style="float: left; margin-right:700px" max-width="750"/></p>
+<p><img src="./hts_notebooks/hts_images/chemlib.png" style="float: left; margin-right:700px" max-width="450"/></p>
 </div>
 </div>
 </div>
@@ -336,7 +341,7 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 <div class="output_markdown rendered_html output_subarea ">
 <h4 id="order_wells" class="doc_header"><code>order_wells</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/core.py#L47" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>order_wells</code>(<strong><code>x</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
-
+<p>Orders wells as they aappear in the plate. For example, converts ['A10', 'A11', 'A12', 'A1', 'A2'] to ['A1', 'A2', 'A10', 'A11', 'A12']. </p>
 </div>
 
 </div>
@@ -347,22 +352,6 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 </div>
     {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">order_wells</span><span class="p">([</span><span class="s1">&#39;A10&#39;</span><span class="p">,</span> <span class="s1">&#39;A11&#39;</span><span class="p">,</span> <span class="s1">&#39;A12&#39;</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">]))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -557,7 +546,6 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 <pre><code>                                 GS = (A − y0) + 0.25μ  
 </code></pre>
-<p>&lt;/div&gt;</p>
 <div align="justify"> 
 </div>
 </div>
@@ -1063,4 +1051,3 @@ Source:  <a href="https://github.com/robintw/PandasToPowerpoint/blob/master/Pand
 </div>
 </div>
  
-
