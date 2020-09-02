@@ -2,21 +2,21 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"exception_handler": "index.ipynb",
+index = {"handle_exceptions": "index.ipynb",
          "add_layout": "index.ipynb",
          "order_wells": "index.ipynb",
-         "hts_heatmap": "index.ipynb",
-         "sum_statistics": "index.ipynb",
+         "heatmap_plate": "index.ipynb",
+         "run_statistics": "index.ipynb",
          "normalize_z": "index.ipynb",
          "histogram_feature": "index.ipynb",
-         "calculate_growth_score": "index.ipynb",
+         "get_growth_scores": "index.ipynb",
          "filter_curves": "index.ipynb",
          "ll4": "index.ipynb",
          "inv_log": "index.ipynb",
          "pDose": "index.ipynb",
-         "dose_response": "index.ipynb",
+         "run_dr": "index.ipynb",
          "plot_dr_viability": "index.ipynb",
-         "prune_compound": "index.ipynb",
+         "prune_dose": "index.ipynb",
          "plot_polynomial": "index.ipynb",
          "plot_treatments": "index.ipynb",
          "plot_curve_raw": "index.ipynb",
@@ -25,9 +25,9 @@ index = {"exception_handler": "index.ipynb",
          "df_to_table": "index.ipynb",
          "create_presentation": "index.ipynb"}
 
-modules = ["core.py"]
+modules = ["simplydrug.py"]
 
-doc_url = "https://disc04.github.io/"
+doc_url = "https://disc04.github.io"
 
 git_url = "https://github.com/disc04/simplydrug/tree/master/"
 

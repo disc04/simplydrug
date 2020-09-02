@@ -1,3 +1,4 @@
+
 ## Welcome to simplydrug
 
 
@@ -94,26 +95,29 @@ The codebase relies on the following dependencies (tested version provided in pa
 
 ```python
 import pandas as pd
-import simplydrug.core as sd
+import simplydrug as sd
 
-data = pd.DataFrame(pd.ExcelFile('hts_notebooks//hts_data//enzyme_kinetics_data1.xlsx').parse(0))[['Well','0s','120s','240s', '360s']]
-layout_path = 'hts_notebooks//hts_data//enzyme_kinetics_layout.xlsx'
-chem_path = 'hts_notebooks//hts_data//compounds//example_chemicals.csv'
+data = pd.DataFrame(pd.ExcelFile('hts_notebooks//test_data//enzyme_kinetics_data1.xlsx').parse(0))[['Well','0s','120s','240s', '360s']]
+layout_path = 'hts_notebooks//test_data//enzyme_kinetics_layout.xlsx'
+chem_path = 'hts_notebooks//test_data//compounds//example_chemicals.csv'
 chem_plate = 'ex_plate1'
 
 results = sd.add_layout(data, layout_path, chem_path = chem_path, chem_plate = chem_plate)
 display(results.head())
 ```
 
-<img style="float: left; margin-right:700px" width="950" src="hts_notebooks/hts_images/index_df.png">
+<img style="float: left; margin-right:700px" width="900" src="hts_notebooks/hts_images/index_df.png">
 
-To check our 384 well plate for systematic errors, we often use heatmap representation:
+To check our 384 well plate for systematic errors, we can use plate heatmap representation:
 
 ```python
-sd.hts_heatmap(df = results, layout_path = layout_path, features = ['120s'], path = None)
+sd.heatmap_plate(df = results, layout_path = layout_path, features = ['120s'], path = None)
+
+from IPython.display import Image
+Image(filename = 'heatmap.png',  width = 500) 
 ```
 
-<img style="float: left; margin-right:700px" width="550" src="hts_notebooks/hts_images/index_heatmap.png">
+<img style="float: left; margin-right:700px" width="600" src="hts_notebooks/hts_images/index_heatmap.png">
 
 <div align="justify"> In this plate, most of the readings across the plate are close to the plate average, and four wells with high readings probably represent our hit compounds.</div>
 
