@@ -10,55 +10,55 @@
 
 The notebooks are built in a sequence and gradually introduce concepts of experimental design, QC, and data analysis of different biological assays.
  
- * [__01a_enzyme_kinetics__](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/01a_enzyme_kinetics.ipynb)      
+ * [__01a_enzyme_kinetics__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/01a_enzyme_kinetics.html)      
 Topics: enzyme kinetics, enzyme assays, fluorometry, assay variability and confidence intervals, Z-factor, Z-score based normalization, plate heatmap, hit extraction, molecule visualization, importing molecule bioactivity data.
  
  
- * [__01b_enzyme_kinetics_in_chain__ ](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/01b_enzyme_kinetics_chain.ipynb)      
+ * [__01b_enzyme_kinetics_in_chain__ ](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/01b_enzyme_kinetics_chain.html)      
 Topics: Running enzymatic assay for a number of plates, generating screen hit matrix, plot for all the plates in the screen.     
 
 
  
- * [__02a_ion_channel_development__ ](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/02a_ion_channel_development.ipynb)             
+ * [__02a_ion_channel_development__ ](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/02a_ion_channel_development.html)             
 Topics: Introduction to ion channels and assay development, ion flux assay normalization, ion channel kinetics time-series.
 
 
  
- * [__02b_ion_channel_cherry_picking__](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/02b_ion_channel_cherry_picking.ipynb)         
+ * [__02b_ion_channel_cherry_picking__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/02b_ion_channel_cherry_picking.html)         
  Topics: Calcium influx assay, cherry picking, percent of activation or inhibition.      
  
  
  
- * [__02c_ion_channel_dose_response__](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/02c_ion_channel_dose_response.ipynb)       
+ * [__02c_ion_channel_dose_response__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/02c_ion_channel_dose_response.html)       
 Topics: Introduction to dose-response, Hill equation.   
    
  
- * [__03a_yeast_growth_screen__](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/03a_yeast_growth_screen.ipynb)     
+ * [__03a_yeast_growth_screen__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/03a_yeast_growth_screen.html)     
  Topics: Running yeast growth assay, growth curve, growth score, filtering out aberrant curves.
  
  
- * [__03b_yeast_growth_in_chain__](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/03b_yeast_growth_in_chain.ipynb)     
+ * [__03b_yeast_growth_in_chain__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/03b_yeast_growth_in_chain.html)     
  Topics: Running yeast growth assay for a number of plates, filtering, generating screen hit matrix, plotting all the plates in the screen.     
   
    
- * [__03c_yeast_cherry_picking__](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/03c_yeast_cherry_picking.ipynb)         
+ * [__03c_yeast_cherry_picking__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/03c_yeast_cherry_picking.html)         
 Topics: Running yeast growth assay with different doses of the compounds. Generation of automatic ppt report.
 
   
- * [__04a_imaging_screen__](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/04a_imaging_screen.ipynb)      
+ * [__04a_imaging_screen__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/04a_imaging_screen.html)      
  Topics: High-content screening and image analysis, reporter system, cell viability, systematic errors detection and correction. 
  
  
- * [__4b_imaging_assay_development__](https://github.com/disc04/simplydrug/blob/master/simplydrug/hts_notebooks/4b_imaging_assay_development.ipynb)  
+ * [__4b_imaging_assay_development__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/4b_imaging_assay_development.html)  
  Topics: Exploration data anslysdis, PCA, Batch effect.
  
  
  
- * [__04c_imaging_dose_response__ ](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/04c_imaging_dose_response.ipynb)    
+ * [__04c_imaging_dose_response__ ](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/04c_imaging_dose_response.html)    
  Topics: Activity versus viability, fitting dose-response for imaging data. 
  
  
- * [__05_xtt_assay__](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/05_xtt_assay.ipynb)    
+ * [__05_xtt_assay__](https://github.com/disc04/simplydrug/blob/master/docs/nb_html/05_xtt_assay.html)    
 Dose-response assay for compound toxicity.
 
 ## Install
