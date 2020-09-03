@@ -49,7 +49,7 @@ Topics: Running yeast growth assay with different doses of the compounds. Genera
  
  
  * [__4b_imaging_assay_development__](https://github.com/disc04/simplydrug/blob/master/simplydrug/hts_notebooks/4b_imaging_assay_development.ipynb)  
- Topics: Exploration data anslysdis, PCA, Batch effect.
+ Topics: Exploration data analysis, PCA, batch effect.
  
  
  
