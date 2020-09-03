@@ -8,9 +8,6 @@ entries:
   - folderitems:
     - output: web,pdf
       title: Overview
-      url: /
-    - output: web,pdf
-      title: Welcome to simplydrug
       url: /#Welcome to simplydrug
     - output: web,pdf
       title: List of notebooks

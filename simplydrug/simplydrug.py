@@ -19,8 +19,8 @@ def handle_exceptions(func):
     return wrapper_func
 
 # Cell
-@handle_exceptions
-def add_layout(df = None, layout_path = None, chem_path = None, chem_plate = None):
+
+def add_layout(df, layout_path, chem_path, chem_plate):
     """Add_layout function updates DataFrame containing measurements with descriptors columns taken from plate layout excel file.
     Sheet names in the layout file are translated to column names in the updated DataFrame.
     """
@@ -45,8 +45,8 @@ def add_layout(df = None, layout_path = None, chem_path = None, chem_plate = Non
     return output
 
 # Cell
-@handle_exceptions
-def order_wells(x = None):
+
+def order_wells(x):
     import re
     """Orders wells as they appear in the plate. For example, converts ['A10', 'A11', 'A12', 'A1', 'A2'] to ['A1', 'A2', 'A10', 'A11', 'A12'].
     """
@@ -55,8 +55,8 @@ def order_wells(x = None):
     return sorted(x, key = alphanum_key)
 
 # Cell
-@handle_exceptions
-def heatmap_plate(df = None, layout_path = None, features = None, path = None, save_as = None):
+
+def heatmap_plate(df, layout_path, features, path, save_as):
     """Takes DataFrame, list of features, a path to layout file, and the output folder and creates a plate heatmap for the input features.
     """
     import pandas as pd
@@ -116,8 +116,8 @@ def heatmap_plate(df = None, layout_path = None, features = None, path = None, s
         plt.close()
 
 # Cell
-@handle_exceptions
-def run_statistics(df = None, feature = None):
+
+def run_statistics(df, feature):
     """Takes DataFrame and calculates summary statistics for the experiment. The data must contain the 'Status' column, defining each row as 'Sample', 'Positive' or 'Negative' control, or 'Reference'.  'Reference' wells are excluded from the analysis.
     """
     import pandas as pd
@@ -143,8 +143,8 @@ def run_statistics(df = None, feature = None):
     return st
 
 # Cell
-@handle_exceptions
-def normalize_z(df = None, feature = None):
+
+def normalize_z(df, feature):
     """Takes DataFrame with measurements and feature name and adds a column with normalized values of the feature.
     """
     import pandas as pd
@@ -154,8 +154,8 @@ def normalize_z(df = None, feature = None):
     return(df)
 
 # Cell
-@handle_exceptions
-def histogram_feature(df = None, feature = None, path = None, save_as = None):
+
+def histogram_feature(df, feature, path, save_as):
     """Creates histogram of the input feature.
     """
     import pandas as pd
@@ -181,8 +181,8 @@ def histogram_feature(df = None, feature = None, path = None, save_as = None):
     plt.close()
 
 # Cell
-@handle_exceptions
-def get_growth_scores(df = None):
+
+def get_growth_scores(df):
     """Calculates growth scores from time series data. Takes pandas DataFrame with time-series data and returns DataFrame with growth scores.
     """
     import pandas as pd
@@ -208,8 +208,8 @@ def get_growth_scores(df = None):
     return score_data
 
 # Cell
-@handle_exceptions
-def filter_curves(df = None):
+
+def filter_curves(df):
     """Filter out aberrant curves."""
     import pandas as pd
     import logging
@@ -238,7 +238,7 @@ def filter_curves(df = None):
     return clean
 
 # Cell
-@handle_exceptions
+
 def ll4(x,b,c,d,e):
     """Dose-response function - LM equation, LL.4 function (4-parameter sigmoidal function).
      - b: hill slope
@@ -251,21 +251,21 @@ def ll4(x,b,c,d,e):
     return(c+(d-c)/(1+np.exp(b*(np.log(x)-np.log(e)))))
 
 # Cell
-@handle_exceptions
-def inv_log(x = None):
+
+def inv_log(x):
     """Inverse log calculator"""
     return ((10**-x)/(1e-6))
 
 # Cell
-@handle_exceptions
-def pDose(x = None):
+
+def pDose(x):
     """Helper function used to compute log transformed concentrations."""
     import numpy as np
     return(-np.log10(1e-6*x))
 
 # Cell
-@handle_exceptions
-def run_dr(df = None, y_label = 'Response', path = None, save_as = None):
+
+def run_dr(df, y_label, path, save_as):
     """Dose response function. The input DataFrame should contain columns 'Compound_id', 'Dose', 'Response'.
     The DataFrame shouldn't contain NAN values or dose 0, which will result in infinity at logDose.
     The fitting function is a LL.4 function (4-parameter sigmoidal function) with
@@ -350,8 +350,8 @@ def run_dr(df = None, y_label = 'Response', path = None, save_as = None):
         return fitData
 
 # Cell
-@handle_exceptions
-def plot_dr_viability(data = None, y_label = 'Response', path = None):
+
+def plot_dr_viability(data, y_label, path):
     """Plots response vs viability. The DataFrame should contain columns ['Compound', 'Dose','logDose', 'Viability', 'Response'] (at least)."""
     import pandas as pd
     import matplotlib as mpl
@@ -409,7 +409,7 @@ def plot_dr_viability(data = None, y_label = 'Response', path = None):
         plt.close()
 
 # Cell
-@handle_exceptions
+
 def prune_dose(df, threshold = -0.15):
     """This function takes DataFrame of one-compound dose-response data, find maximum activity,
     and drops rows starting from treshold-defined reduction of Response. The default value for threshold = -0.15,
@@ -428,8 +428,8 @@ def prune_dose(df, threshold = -0.15):
     return(prunned)
 
 # Cell
-@handle_exceptions
-def plot_polynomial(df = None, y_label = 'Response', degree = 2, path = None, save_as = None):
+
+def plot_polynomial(df, y_label, path, save_as, degree = 2):
     """Plot polynomial fit."""
     import pandas as pd
     import numpy as np
@@ -480,9 +480,8 @@ def plot_polynomial(df = None, y_label = 'Response', degree = 2, path = None, sa
         plt.close()
 
 # Cell
-@handle_exceptions
-def plot_treatments(df = None, x = None, y = None, column = None, kind = None, ylabel = None,
-                    palette = None, height = None, aspect = None, path = None, save_as = None):
+
+def plot_treatments(df, x, y, column, kind, ylabel, palette, height, aspect, path, save_as):
     """Creates plot by compounds. If your data has different treatments, set column = 'Treatment'."""
     import pandas as pd
     import matplotlib as mpl
@@ -509,9 +508,8 @@ def plot_treatments(df = None, x = None, y = None, column = None, kind = None, y
     plt.close()
 
 # Cell
-@handle_exceptions
-def plot_curve_raw(df = None, x = None, y = None, units = None, hue = None, hue_order = None, xlabel = None,
-                   ylabel = None, xlimit = None, palette = None, path = None, save_as = None):
+
+def plot_curve_raw(df, x, y, units, hue, hue_order, xlabel, ylabel, xlimit, palette, path, save_as):
     """Plots raw kinetic curves."""
     import pandas as pd
     import matplotlib as mpl
@@ -539,9 +537,8 @@ def plot_curve_raw(df = None, x = None, y = None, units = None, hue = None, hue_
     plt.close()
 
 # Cell
-@handle_exceptions
-def plot_curve_mean(df = None, x = None, y = None, hue = None, hue_order = None, xlabel = None, ylabel = None,
-                    xlimit = None, palette = None, path = None, save_as = None):
+
+def plot_curve_mean(df, x, y, hue, hue_order, xlabel, ylabel, xlimit, palette, path, save_as):
     """Plots mean kinetic curves."""
     import pandas as pd
     import matplotlib as mpl
@@ -569,9 +566,8 @@ def plot_curve_mean(df = None, x = None, y = None, hue = None, hue_order = None,
     plt.close()
 
 # Cell
-@handle_exceptions
-def pointplot_plate(df = None, x = None, y = None, hue = None, hue_order = None, threshold = None, ylabel = None,
-                    palette = None,  path = None, save_as = None):
+
+def pointplot_plate(df, x, y, hue, hue_order, threshold, ylabel, palette,  path, save_as):
     """Creates point plot for the experiment."""
     import pandas as pd
     import matplotlib as mpl
@@ -600,8 +596,8 @@ def pointplot_plate(df = None, x = None, y = None, hue = None, hue_order = None,
     plt.close()
 
 # Cell
-@handle_exceptions
-def df_to_table(df = None, slide = None, left = None, top = None, width = None, height = None, colnames = None):
+
+def df_to_table(df, slide, left, top, width, height, colnames):
     """Converts a Pandas DataFrame to a PowerPoint table on the given slide of a PowerPoint presentation.
     The table is a standard Powerpoint table, and can easily be modified with the Powerpoint tools (resizing columns, changing formatting etc).
     Source:  https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py
@@ -636,10 +632,9 @@ def df_to_table(df = None, slide = None, left = None, top = None, width = None, 
             paragraph.font.size = Pt(9)
 
 # Cell
-@handle_exceptions
-def create_presentation(path = None):
-    """Creates ppt report from files in the specified folder.
-    """
+
+def create_presentation(path):
+    """Creates ppt report from files in the specified folder. """
     import os
     import pandas as pd
     from datetime import date

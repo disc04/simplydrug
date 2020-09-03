@@ -1,7 +1,6 @@
 {
   "simplydrug": {
-    "Overview": "/",
-	"Welcome to simplydrug": "/#Welcome to simplydrug",
+    "Overview": "/#Welcome to simplydrug",
 	"List of notebooks": "/#List of notebooks",
 	"Install": "/#Install",
 	"Dependencies": "/#Dependencies",
