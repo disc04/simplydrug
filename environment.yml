@@ -13,7 +13,7 @@ dependencies:
   - rdkit=2019.09.3
   - scipy
   - matplotlib
-  - seaborn
+  - seaborn=0.10.0
   - pip:
     - nbdev
     - pubchempy

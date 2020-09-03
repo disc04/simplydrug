@@ -1,8 +1,8 @@
 ---
+layout: default
 title: simplydrug
 keywords: fastai
 sidebar: home_sidebar
-layout : default
 nb_path: "index.ipynb"
 ---
 <!--
@@ -190,7 +190,7 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./hts_notebooks/hts_images/index_df.png" style="vertical-align:left margin:50px 50px" width="750"/></p>
+<p><img src="./hts_notebooks/hts_images/index_df.png" style="vertical-align:left margin:50px 50px" width="650"/></p>
 
 </div>
 </div>
@@ -209,21 +209,22 @@ Dose-response assay for compound toxicity.</li>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd</span><span class="o">.</span><span class="n">heatmap_plate</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="p">,</span> <span class="n">layout_path</span> <span class="o">=</span> <span class="n">layout_path</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;120s&#39;</span><span class="p">],</span> <span class="n">path</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd</span><span class="o">.</span><span class="n">heatmap_plate</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">results</span><span class="p">,</span> <span class="n">layout_path</span> <span class="o">=</span> <span class="n">layout_path</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;120s&#39;</span><span class="p">],</span> <span class="n">path</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">save_as</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;heatmap.png&#39;</span><span class="p">,</span>  <span class="n">width</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span> 
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;heatmap.png&#39;</span><span class="p">,</span>  <span class="n">width</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span> 
 </pre></div>
 
     </div>
 </div>
 </div>
+
 </div>
     {% endraw %}
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./hts_notebooks/hts_images/index_heatmap.png" style="vertical-align:left margin:50px 50px" width="300"/></p>
+<p><img src="./hts_notebooks/hts_images/index_heatmap.png" style="vertical-align:left margin:50px 50px" width="270"/></p>
 
 </div>
 </div>
@@ -297,10 +298,8 @@ Dose-response assay for compound toxicity.</li>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="add_layout" class="doc_header"><code>add_layout</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/simplydrug.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>add_layout</code>(<strong><code>df</code></strong>, <strong><code>layout_path</code></strong>, <strong><code>chem_path</code></strong>, <strong><code>chem_plate</code></strong>)</p>
+<h4 id="handle_exceptions.<locals>.wrapper_func" class="doc_header"><code>handle_exceptions.<locals>.wrapper_func</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/simplydrug.py#L13" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>handle_exceptions.<locals>.wrapper_func</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
-<p>Add_layout function updates DataFrame containing measurements with descriptors columns taken from plate layout excel file.
-Sheet names in the layout file are translated to column names in the updated DataFrame.</p>
 
 </div>
 
@@ -583,7 +582,6 @@ For example, to load compounds from plate 3 of the library, we will pass to the 
 
 <pre><code>                                 GS = (A − y0) + 0.25μ  
 </code></pre>
-
 <div align="justify"> 
 </div>
 </div>
@@ -1031,7 +1029,7 @@ it drops rows starting from 15% reduction of Response. The input DataFrame shoul
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="df_to_table" class="doc_header"><code>df_to_table</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/simplydrug.py#L600" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>df_to_table</code>(<strong><code>df</code></strong>, <strong><code>slide</code></strong>, <strong><code>left</code></strong>, <strong><code>top</code></strong>, <strong><code>width</code></strong>, <strong><code>height</code></strong>, <strong><code>colnames</code></strong>)</p>
+<h4 id="df_to_table" class="doc_header"><code>df_to_table</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/simplydrug.py#L600" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>df_to_table</code>(<strong><code>df</code></strong>, <strong><code>slide</code></strong>, <strong><code>left</code></strong>, <strong><code>top</code></strong>, <strong><code>width</code></strong>, <strong><code>height</code></strong>)</p>
 </blockquote>
 <p>Converts a Pandas DataFrame to a PowerPoint table on the given slide of a PowerPoint presentation.
 The table is a standard Powerpoint table, and can easily be modified with the Powerpoint tools (resizing columns, changing formatting etc).
@@ -1065,7 +1063,7 @@ Source:  <a href="https://github.com/robintw/PandasToPowerpoint/blob/master/Pand
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="create_presentation" class="doc_header"><code>create_presentation</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/simplydrug.py#L636" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_presentation</code>(<strong><code>path</code></strong>)</p>
+<h4 id="create_presentation" class="doc_header"><code>create_presentation</code><a href="https://github.com/disc04/simplydrug/tree/master/simplydrug/simplydrug.py#L634" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_presentation</code>(<strong><code>path</code></strong>)</p>
 </blockquote>
 <p>Creates ppt report from files in the specified folder.</p>
 

@@ -1,5 +1,6 @@
 ## Welcome to simplydrug
 
+
 <div align="justify">  To advance scientific communication and integrative drug discovery, we developed a set of open-source based analysis workflows. These workflows describe the early stages of biological assay development and high throughput screening and provide a hands-on introduction to Drug Discovery for everybody with basic knowledge of biology, python programming, or data science. </div>
 
 <img style="float: left; margin-right:700px" width="550" src="hts_notebooks/hts_images/bcdd.png">
@@ -109,10 +110,10 @@ display(results.head())
 To check our 384 well plate for systematic errors, we can use plate heatmap representation:
 
 ```python
-sd.heatmap_plate(df = results, layout_path = layout_path, features = ['120s'], path = None)
+sd.heatmap_plate(df = results, layout_path = layout_path, features = ['120s'], path = None, save_as = None)
 
 from IPython.display import Image
-Image(filename = 'heatmap.png',  width = 500) 
+Image(filename = 'heatmap.png',  width = 400) 
 ```
 
 <img style="float: left; margin-right:700px" width="600" src="hts_notebooks/hts_images/index_heatmap.png">

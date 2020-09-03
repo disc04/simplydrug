@@ -19,7 +19,7 @@ def handle_exceptions(func):
     return wrapper_func
 
 # Cell
-
+@handle_exceptions
 def add_layout(df, layout_path, chem_path, chem_plate):
     """Add_layout function updates DataFrame containing measurements with descriptors columns taken from plate layout excel file.
     Sheet names in the layout file are translated to column names in the updated DataFrame.
@@ -45,7 +45,7 @@ def add_layout(df, layout_path, chem_path, chem_plate):
     return output
 
 # Cell
-
+@handle_exceptions
 def order_wells(x):
     import re
     """Orders wells as they appear in the plate. For example, converts ['A10', 'A11', 'A12', 'A1', 'A2'] to ['A1', 'A2', 'A10', 'A11', 'A12'].
@@ -55,7 +55,7 @@ def order_wells(x):
     return sorted(x, key = alphanum_key)
 
 # Cell
-
+@handle_exceptions
 def heatmap_plate(df, layout_path, features, path, save_as):
     """Takes DataFrame, list of features, a path to layout file, and the output folder and creates a plate heatmap for the input features.
     """
@@ -116,7 +116,7 @@ def heatmap_plate(df, layout_path, features, path, save_as):
         plt.close()
 
 # Cell
-
+@handle_exceptions
 def run_statistics(df, feature):
     """Takes DataFrame and calculates summary statistics for the experiment. The data must contain the 'Status' column, defining each row as 'Sample', 'Positive' or 'Negative' control, or 'Reference'.  'Reference' wells are excluded from the analysis.
     """
@@ -143,7 +143,7 @@ def run_statistics(df, feature):
     return st
 
 # Cell
-
+@handle_exceptions
 def normalize_z(df, feature):
     """Takes DataFrame with measurements and feature name and adds a column with normalized values of the feature.
     """
@@ -154,7 +154,7 @@ def normalize_z(df, feature):
     return(df)
 
 # Cell
-
+@handle_exceptions
 def histogram_feature(df, feature, path, save_as):
     """Creates histogram of the input feature.
     """
@@ -181,7 +181,7 @@ def histogram_feature(df, feature, path, save_as):
     plt.close()
 
 # Cell
-
+@handle_exceptions
 def get_growth_scores(df):
     """Calculates growth scores from time series data. Takes pandas DataFrame with time-series data and returns DataFrame with growth scores.
     """
@@ -597,7 +597,7 @@ def pointplot_plate(df, x, y, hue, hue_order, threshold, ylabel, palette,  path,
 
 # Cell
 
-def df_to_table(df, slide, left, top, width, height, colnames):
+def df_to_table(df, slide, left, top, width, height):
     """Converts a Pandas DataFrame to a PowerPoint table on the given slide of a PowerPoint presentation.
     The table is a standard Powerpoint table, and can easily be modified with the Powerpoint tools (resizing columns, changing formatting etc).
     Source:  https://github.com/robintw/PandasToPowerpoint/blob/master/PandasToPowerpoint.py
@@ -608,10 +608,8 @@ def df_to_table(df, slide, left, top, width, height, colnames):
 
     rows, cols = df.shape
     res = slide.shapes.add_table(rows + 1, cols, left, top, width, height)
-
-    if colnames is None:
-        colnames = list(df.columns)
-        colnames[0] = 'idx'
+    colnames = list(df.columns)
+    colnames[0] = 'idx'
 
     # Insert the column names
     for col_index, col_name in enumerate(colnames):
