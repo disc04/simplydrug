@@ -4,7 +4,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python>=3.6
+  - python=3.6.1
   - pip
   - jupyter
   - scikit-learn
@@ -17,6 +17,6 @@ dependencies:
   - pip:
     - nbdev
     - pubchempy
-    - python-pptx
+    - python-pptx=0.6.18
     - wget
     - xlrd
