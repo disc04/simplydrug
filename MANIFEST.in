@@ -2,5 +2,4 @@ include settings.ini
 include LICENSE
 include CONTRIBUTING.md
 include README.md
-include hts_notebooks/hts_images/*.png
 recursive-exclude * __pycache__
