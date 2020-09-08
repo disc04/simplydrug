@@ -34,7 +34,7 @@ setuptools.setup(
         'Natural Language :: ' + cfg['language'].title(),
     ] + ['Programming Language :: Python :: '+o for o in py_versions[py_versions.index(min_python):]],
     url = 'https://github.com/{}/{}'.format(cfg['user'],cfg['lib_name']),
-    download_url = 'https://github.com/disc04/simplydrug/archive/v0.0.1.tar.gz',
+    download_url = 'https://github.com/disc04/simplydrug/archive/v0.0.3.tar.gz',
     packages = setuptools.find_packages(),
     include_package_data = True,
     install_requires = requirements,
