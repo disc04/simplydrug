@@ -1,0 +1,21 @@
+name: simplydrug
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.6.10
+  - pip
+  - jupyter
+  - scikit-learn
+  - numpy
+  - pandas
+  - rdkit==2019.09.3
+  - scipy
+  - matplotlib
+  - seaborn==0.10.0
+  - pip:
+    - pubchempy
+    - python-pptx==0.6.18
+    - wget
+    - xlrd
