@@ -3,7 +3,8 @@
 
 <div align="justify">  To advance scientific communication and integrative drug discovery, we developed a set of open-source based analysis workflows. These workflows describe the early stages of biological assay development and high throughput screening and provide a hands-on introduction to Drug Discovery for everybody with basic knowledge of biology, python programming, or data science. </div>
 
-<img style="float: left; margin-right:700px" width="550" src="hts_notebooks/hts_images/bcdd.png">
+<img style="float: left; margin-right:700px" width="550" src="https://github.com/disc04/simplydrug/blob/master/hts_notebooks/hts_images/bcdd.png?raw=true">
+![bcdd](https://github.com/disc04/simplydrug/blob/master/hts_notebooks/hts_images/bcdd.png?raw=true)
 
 ## List of notebooks
 
