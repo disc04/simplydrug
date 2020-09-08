@@ -105,7 +105,7 @@ results = sd.add_layout(data, layout_path, chem_path = chem_path, chem_plate = c
 display(results.head())
 ```
 
-<img style="float: left; margin-right:700px" width="900" src="https://github.com/disc04/simplydrug/blob/master/hts_notebooks/hts_images/index_df.png">
+<img style="float: left; margin-right:700px" width="900" src="hts_notebooks/hts_images/index_df.png">
 
 To check our 384 well plate for systematic errors, we can use plate heatmap representation:
 
@@ -116,7 +116,7 @@ from IPython.display import Image
 Image(filename = 'heatmap.png',  width = 400) 
 ```
 
-<img style="float: left; margin-right:700px" width="600" src="https://github.com/disc04/simplydrug/blob/master/hts_notebooks/hts_images/index_heatmap.png">
+<img style="float: left; margin-right:700px" width="600" src="hts_notebooks/hts_images/index_heatmap.png">
 
 <div align="justify"> In this plate, most of the readings across the plate are close to the plate average, and four wells with high readings probably represent our hit compounds.</div>
 
